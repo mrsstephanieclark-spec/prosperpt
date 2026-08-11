@@ -26,11 +26,24 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSubmitError(null);
 
+    // Read Formspree ID from env or use placeholder.
+    // Replace '[Formspree-ID — TBD]' with your Formspree ID (e.g. 'mqkrgqdq')
+    const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID || "[Formspree-ID — TBD]";
+
+    if (formspreeId === "[Formspree-ID — TBD]") {
+      console.warn("Formspree ID is not configured. Redirecting to /thank-you in development.");
+      setTimeout(() => {
+        router.push("/thank-you");
+      }, 1000);
+      return;
+    }
+
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept": "application/json",
         },
         body: JSON.stringify(data),
       });
@@ -132,7 +145,7 @@ export default function ContactForm() {
         disabled={isSubmitting}
         className="w-full py-3.5 px-6 rounded-xl bg-accent text-white text-sm font-semibold tracking-wide shadow-sm hover:bg-accent/90 disabled:bg-accent/50 focus:outline-none focus:ring-4 focus:ring-accent/20 transition-all cursor-pointer"
       >
-        {isSubmitting ? "Submitting..." : "Send Request"}
+        {isSubmitting ? "Submitting..." : "Get Started"}
       </motion.button>
     </form>
   );
