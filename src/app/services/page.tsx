@@ -1,46 +1,47 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
-import ContactBox from "@/components/ContactBox";
-import { ArrowRight, Activity, Eye, UserPlus, Flame } from "lucide-react";
+import GetInTouchBox from "@/components/GetInTouchBox";
+import { ArrowRight, Activity, Zap, Dumbbell, ShieldCheck } from "lucide-react";
 
-export const metadata = {
-  title: "Our Services",
-  description: "Explore doctorate-level physical therapy, pelvic health, running coaching, and red light recovery services at Prosper PT & Wellness in Shelbyville, KY.",
+export const metadata: Metadata = {
+  title: "Services | Physical Therapy, Pelvic Health & Personal Training | Prosper PT & Wellness",
+  description: "Explore physical therapy, dry needling, pelvic health, personal training, and recovery services at Prosper PT & Wellness in Shelbyville, KY. Mobile, in-office, and telehealth options.",
 };
 
 const serviceCards = [
   {
     title: "Physical Therapy",
-    description: "Doctorate-level orthopedic and sports rehabilitation. We treat back pain, neck pain, headaches, and joint stiffness using dry needling, cupping, and customized functional movement adjustments. The focus is equipping you to self-manage and prevent future pain.",
+    description: "Orthopedic and sports rehab, dry needling, manual therapy, cupping, and kinesiotaping.",
     href: "/services/physical-therapy",
     icon: <Activity className="w-6 h-6 text-accent" />,
     image: "/images/hero_pt_wellness.jpg",
   },
   {
-    title: "Pelvic & Bladder Health",
-    description: "Personalized pelvic floor physical therapy for both men and women. We help clients resolve bladder dysfunction, incontinence, and chronic pelvic pain. We also offer specialized prenatal, postpartum, and fertility-related support.",
+    title: "Women's & Pelvic Health",
+    description: "Pelvic health, incontinence (male and female), fertility-related conditions, and pre/postnatal care.",
     href: "/services/pelvic-health",
-    icon: <Eye className="w-6 h-6 text-accent" />,
+    icon: <ShieldCheck className="w-6 h-6 text-accent" />,
     image: "/images/pelvic_health.jpg",
   },
   {
-    title: "Personal Training & Running",
-    description: "Comprehensive running performance coaching, video gait analysis, and strength training. Perfect for student athletes, runners, and active adults looking to build physical capacity, improve form, and return to sport safely.",
+    title: "Personal Training & Running Coaching",
+    description: "General wellness, strength, sport-specific training, and running performance coaching.",
     href: "/services/personal-training-running",
-    icon: <UserPlus className="w-6 h-6 text-accent" />,
+    icon: <Dumbbell className="w-6 h-6 text-accent" />,
     image: "/images/running_performance.jpg",
   },
   {
     title: "Recovery & Red Light Therapy",
-    description: "Speed cellular repair, decrease muscle soreness, and support ongoing wellness. We offer clinical red light therapy panel sessions, cupping, and recovery physical therapy—ideal for maintenance work that keeps you active.",
+    description: "Kineon Move+Pro rental and HEALiX infrared blanket sessions for recovery and maintenance care.",
     href: "/services/recovery-red-light-therapy",
-    icon: <Flame className="w-6 h-6 text-accent" />,
+    icon: <Zap className="w-6 h-6 text-accent" />,
     image: "/images/recovery_recovery.jpg",
   },
 ];
 
-export default function Services() {
+export default function ServicesHub() {
   return (
     <div>
       {/* Header */}
@@ -48,13 +49,13 @@ export default function Services() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn direction="up">
             <span className="font-sans text-xs uppercase tracking-widest text-secondary font-bold">
-              Our Services
+              Our Practice Areas
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mt-4 mb-6 leading-tight">
-              One-on-one care tailored to your lifestyle
+              Everything You Need to Move Well
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              We look at your body as a whole, considering your sleep, stress, and goals. Select a service below to explore our doctorate-level clinical care.
+              Every patient is different, so every plan is built around you — your goals, your schedule, and your life. Browse our services below, or start here and we'll help you figure out the right fit.
             </p>
           </FadeIn>
         </div>
@@ -63,85 +64,79 @@ export default function Services() {
       {/* Services Grid list */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-20 md:space-y-28">
-            {serviceCards.map((service, index) => (
-              <div
-                key={service.title}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
-              >
-                {/* Photo container */}
-                <div
-                  className={`lg:col-span-5 flex justify-center ${
-                    index % 2 === 1 ? "lg:order-2" : "lg:order-1"
-                  }`}
-                >
-                  <FadeIn direction={index % 2 === 1 ? "right" : "left"} className="relative w-full max-w-md">
-                    <div className="aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-sm border border-secondary/15 organic-shape-1">
-                      <Image
-                        src={service.image}
-                        alt={service.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 33vw"
-                      />
-                    </div>
-                  </FadeIn>
-                </div>
+          
+          {/* SEO keyword context block */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="font-sans text-xs text-primary/60 max-w-xl mx-auto leading-relaxed">
+              We offer comprehensive **physical therapy services in Shelbyville, KY**, including advanced therapeutic modalities like **dry needling**, myofascial **cupping**, specialized **pelvic health** care, and targeted **personal training**.
+            </p>
+          </div>
 
-                {/* Text Context */}
-                <div
-                  className={`lg:col-span-7 ${
-                    index % 2 === 1 ? "lg:order-1" : "lg:order-2"
-                  }`}
-                >
-                  <FadeIn direction={index % 2 === 1 ? "left" : "right"}>
-                    <div className="p-3 bg-cream rounded-full w-fit text-accent mb-6">
-                      {service.icon}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            {serviceCards.map((service, index) => (
+              <FadeIn key={service.title} direction="up" delay={index * 0.1}>
+                <div className="bg-cream rounded-3xl overflow-hidden border border-secondary/10 flex flex-col justify-between h-full hover:shadow-md transition-all duration-300">
+                  <div className="relative aspect-[3/2] w-full">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col justify-between flex-grow">
+                    <div>
+                      <div className="p-3 bg-white text-accent rounded-2xl w-fit mb-4">
+                        {service.icon}
+                      </div>
+                      <h2 className="font-serif text-2xl font-bold text-primary mb-3">
+                        {service.title}
+                      </h2>
+                      <p className="font-sans text-sm text-primary/80 mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
                     </div>
-                    <h2 className="font-serif text-3xl font-bold text-primary mb-4">
-                      {service.title}
-                    </h2>
-                    <p className="font-sans text-base text-primary/80 mb-6 leading-relaxed">
-                      {service.description}
-                    </p>
-                    <div className="flex gap-4">
-                      <Link
-                        href={service.href}
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent text-white font-sans text-sm font-semibold shadow-sm hover:bg-accent/90 transition-all hover:scale-[1.01]"
-                      >
-                        Explore Service Details
-                      </Link>
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-1.5 px-6 py-3 rounded-full border border-primary/10 text-primary font-sans text-sm font-medium hover:bg-primary/5 transition-all"
-                      >
-                        Book Consult <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                    </div>
-                  </FadeIn>
+                    <Link
+                      href={service.href}
+                      className="inline-flex items-center gap-1 text-accent font-semibold text-sm hover:text-accent/80 transition-colors group"
+                    >
+                      Learn More Details <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
+
+          {/* Wellness Membership block */}
+          <div className="bg-cream rounded-3xl p-8 max-w-3xl mx-auto border border-secondary/15">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+              <div className="p-4 bg-white text-secondary rounded-2xl shadow-sm shrink-0">
+                <ShieldCheck className="w-8 h-8 text-accent" />
+              </div>
+              <div>
+                <h3 className="font-serif text-xl font-bold text-primary mb-2">
+                  Stay on Track Between Visits
+                </h3>
+                <p className="font-sans text-sm text-primary/85 leading-relaxed mb-4">
+                  Ask us about our ongoing wellness membership for ongoing maintenance care and recovery support between visits.
+                </p>
+                <Link
+                  href="/contact"
+                  className="font-sans text-xs font-semibold text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-1 group"
+                >
+                  Start Here to Learn More <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      {/* Wellness Membership light mention */}
-      <section className="bg-cream py-16 md:py-20 border-t border-secondary/15">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <FadeIn direction="up">
-            <h3 className="font-serif text-2xl font-bold text-primary mb-3">
-              Looking for ongoing care?
-            </h3>
-            <p className="font-sans text-sm text-primary/80 leading-relaxed max-w-xl mx-auto mb-6">
-              For clients who have completed their initial rehab or want ongoing recovery support, we offer a light wellness maintenance membership. This includes recurring recovery work, red light sessions, and check-ins to prevent re-injury. Ask your therapist for details.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Reusable Contact Box at bottom (matching pattern) */}
-      <ContactBox />
+      {/* Get in Touch Box repeated */}
+      <GetInTouchBox />
     </div>
   );
 }

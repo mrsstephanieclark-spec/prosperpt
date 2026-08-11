@@ -1,41 +1,31 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
-import ContactBox from "@/components/ContactBox";
-import { CheckCircle2 } from "lucide-react";
+import GetInTouchBox from "@/components/GetInTouchBox";
+import { Check } from "lucide-react";
 
-export const metadata = {
-  title: "Women's & Pelvic Health",
-  description: "Specialized pelvic health physical therapy in Shelbyville, KY. Treating male and female bladder dysfunction, incontinence, prenatal, and postpartum recovery.",
+export const metadata: Metadata = {
+  title: "Pelvic Health & Incontinence Therapy | Prosper PT & Wellness | Shelbyville, KY",
+  description: "Pelvic health physical therapy for men and women in Shelbyville, KY — incontinence, fertility-related conditions, and pre/postnatal care from doctorate-level therapists.",
 };
 
-const conditions = [
-  "Incontinence & bladder leakage (male & female)",
-  "Urinary urgency, frequency, or hesitancy",
-  "Pelvic pain & discomfort (male & female)",
-  "Postpartum core weakness & diastasis recti",
-  "Prenatal pelvis pain & birth preparation",
-  "Fertility support & pelvic floor alignment",
-  "Pain with intercourse or intimacy",
-  "Constipation & bowel dysfunction",
-];
-
-const pillars = [
+const inclusions = [
   {
-    name: "For Both Men & Women",
-    desc: "Bladder dysfunction, urinary leakage, and chronic pelvic pain affect both male and female bodies. We offer private, comfortable clinical assessments and targeted care plans tailored to your specific anatomy.",
+    title: "Incontinence",
+    desc: "Bladder dysfunction and leakage treatment designed for both men and women. We help coordinate strength and muscle control.",
   },
   {
-    name: "Prenatal & Postpartum Support",
-    desc: "Help your body prepare for labor, address pelvic girdle discomfort during pregnancy, and recover core capacity, strength, and function after birth. You don't have to live with postpartum leakage.",
+    title: "Fertility-related conditions",
+    desc: "Support for patients navigating fertility challenges, integrating visceral alignment and stress regulation.",
   },
   {
-    name: "Fertility Support",
-    desc: "Integrating gentle visceral mobilization, pelvic alignment techniques, and nervous system regulation to support your body's natural reproductive function and fertility journey.",
+    title: "Pre/postnatal care",
+    desc: "From pregnancy support (pelvic girdle alignment) through postpartum core recovery and safe workout returns.",
   },
   {
-    name: "Autonomy & Comfort First",
-    desc: "Pelvic floor therapy is deeply personal. We prioritize your comfort, explaining every detail beforehand, and work entirely at your own pace in a private, supportive clinical setting.",
+    title: "Pelvic pain and dysfunction",
+    desc: "A thorough, judgment-free evaluation and customized treatment plan to resolve chronic pain and tightness.",
   },
 ];
 
@@ -47,102 +37,94 @@ export default function PelvicHealth() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn direction="up">
             <span className="font-sans text-xs uppercase tracking-widest text-secondary font-bold">
-              Specialized Clinical Care
+              Inclusive Care
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mt-4 mb-6 leading-tight">
-              Pelvic Floor & Bladder Health
+              Pelvic Health Care for Every Body
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              Private, doctorate-level therapy for incontinence, bladder dysfunction, pelvic discomfort, and maternity recovery in Shelbyville, KY.
+              Pelvic health issues are common, treatable, and nothing to be embarrassed about. We treat both men and women, with the same one-on-one, whole-person approach as every other visit at Prosper.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* Narrative Section */}
-      <section className="bg-white py-16 md:py-24">
+      {/* Main Content */}
+      <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* Left side text */}
+            
+            {/* Left Content */}
             <div className="lg:col-span-7">
               <FadeIn direction="left">
                 <h2 className="font-serif text-3xl font-bold text-primary mb-6">
-                  Restoring function, comfort, and control
+                  What's Included in Your Care
                 </h2>
-                <div className="font-sans text-base text-primary/80 space-y-6 leading-relaxed mb-8">
-                  <p>
-                    Pelvic floor dysfunction is incredibly common, but it is not something you simply have to live with. Many clients are told that leakage, bladder urgency, or pelvic pain are just normal parts of aging or motherhood. We are here to change that narrative.
-                  </p>
-                  <p>
-                    <strong>Bladder dysfunction is not women-only.</strong> We treat both men and women for urinary leakage, urgency, and pelvic floor pain. The pelvic floor is a group of muscles like any other, and it responds to skilled movement re-education, strength coordination, and manual therapy.
-                  </p>
-                  <p>
-                    For moms, we provide comprehensive prenatal support to manage pain and prepare for delivery, along with postpartum care to safely restore core strength, heal diastasis recti, and return to workouts without leakage.
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {pillars.map((pillar) => (
-                    <div
-                      key={pillar.name}
-                      className="p-5 rounded-2xl bg-cream border border-secondary/10"
-                    >
-                      <h4 className="font-serif text-base font-bold text-primary mb-1">
-                        {pillar.name}
-                      </h4>
-                      <p className="font-sans text-xs text-primary/70 leading-relaxed">
-                        {pillar.desc}
-                      </p>
+                
+                <div className="space-y-6 mb-10">
+                  {inclusions.map((inc) => (
+                    <div key={inc.title} className="flex gap-4 p-5 bg-cream rounded-3xl border border-secondary/5">
+                      <div className="p-1 rounded-full bg-white text-accent h-fit mt-0.5 shadow-sm">
+                        <Check className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <h3 className="font-serif text-lg font-bold text-primary mb-1">
+                          {inc.title}
+                        </h3>
+                        <p className="font-sans text-sm text-primary/80 leading-relaxed">
+                          {inc.desc}
+                        </p>
+                      </div>
                     </div>
                   ))}
+                </div>
+
+                <div className="p-6 bg-cream rounded-2xl border-l-4 border-accent">
+                  <h4 className="font-serif text-sm font-bold text-primary mb-1">
+                    Specialized Pelvic Support
+                  </h4>
+                  <p className="font-sans text-xs text-primary/70 leading-relaxed">
+                    If you need trusted **pelvic health in Shelbyville, KY**, specialized **fertility physical therapy**, bladder **incontinence treatment**, postpartum physical therapy, or targeted **male incontinence treatment**, our team provides direct support. We ensure that pelvic floor muscle care is private, comfortable, and tailored to your specific goals.
+                  </p>
                 </div>
               </FadeIn>
             </div>
 
-            {/* Right side check items */}
+            {/* Right Side */}
             <div className="lg:col-span-5 lg:sticky lg:top-28">
               <FadeIn direction="right">
-                <div className="relative aspect-[3/2] w-full rounded-3xl overflow-hidden shadow-sm border border-secondary/15 mb-6">
+                <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-sm border border-secondary/15 mb-8">
                   <Image
                     src="/images/pelvic_health.jpg"
-                    alt="Dr. Meg discussing pelvic anatomy in a warm clinical setting"
+                    alt="Pelvic health physical therapy consultation session"
                     fill
                     className="object-cover"
                   />
                 </div>
-                
-                <div className="bg-cream rounded-3xl p-8 border border-secondary/15">
-                  <h3 className="font-serif text-xl font-bold text-primary mb-6">
-                    What We Help Resolve
-                  </h3>
-                  <ul className="space-y-4">
-                    {conditions.map((condition) => (
-                      <li key={condition} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                        <span className="font-sans text-sm text-primary/95 font-medium">
-                          {condition}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
 
-                  <div className="mt-8 pt-6 border-t border-secondary/10">
-                    <Link
-                      href="/contact"
-                      className="flex items-center justify-center w-full px-5 py-3 rounded-full bg-accent text-white font-sans text-sm font-semibold hover:bg-accent/90 transition-colors shadow-sm"
-                    >
-                      Schedule a Private Consult
-                    </Link>
-                  </div>
+                <div className="bg-cream rounded-3xl p-8 border border-secondary/15">
+                  <h3 className="font-serif text-xl font-bold text-primary mb-4">
+                    Who This Is For
+                  </h3>
+                  <p className="font-sans text-sm text-primary/80 leading-relaxed mb-6">
+                    Moms navigating fertility, pregnancy, or postpartum recovery; anyone — male or female — dealing with incontinence or bladder dysfunction; and anyone experiencing pelvic pain who hasn't found real answers elsewhere.
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="flex items-center justify-center w-full px-5 py-3 rounded-full bg-accent text-white font-sans text-sm font-semibold hover:bg-accent/90 transition-colors shadow-sm"
+                  >
+                    Schedule a Consultation
+                  </Link>
                 </div>
               </FadeIn>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* Reusable Contact Box */}
-      <ContactBox />
+      {/* Get in Touch Box repeated */}
+      <GetInTouchBox />
     </div>
   );
 }
