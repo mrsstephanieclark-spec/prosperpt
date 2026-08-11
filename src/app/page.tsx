@@ -80,18 +80,23 @@ export default function Home() {
       <LocalBusinessSchema />
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[85vh] flex items-center bg-primary overflow-hidden">
-        {/* Full-bleed background image with soft navy gradient overlay */}
+      <section className="relative min-h-[85vh] flex items-center bg-teal-deep overflow-hidden">
+        {/* Full-bleed background video with soft teal-deep gradient overlay */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero_pt_wellness.jpg"
-            alt="One-on-one physical therapy treatment session in Shelbyville KY"
-            fill
-            className="object-cover opacity-35"
-            priority
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/images/hero_pt_wellness.jpg"
+            className="object-cover w-full h-full opacity-50"
+          >
+            <source src="/images/hero.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/75 to-teal-deep/35"></div>
+          {/* Subtle left-to-right gradient to ensure text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-teal-deep/40 via-transparent to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-cream">

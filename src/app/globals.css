@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #22344A;
-  --color-secondary: #8AA38D;
-  --color-accent: #C98B73;
-  --color-cream: #FAF6EF;
-  --color-off-white: #FFFFFF;
+  --color-primary: #22344A;       /* Deep Navy - for text & headings only */
+  --color-secondary: #AACFD0;     /* brand-teal - primary brand color */
+  --color-teal-deep: #2F4B4C;     /* brand-teal-deep - dark teal for overlays/dark sections */
+  --color-accent: #C98B73;        /* Warm Terracotta/Blush - CTA buttons */
+  --color-cream: #FAF6EF;         /* Cream background */
+  --color-off-white: #FFFFFF;     /* Off-White */
   
   --font-serif: var(--font-fraunces), Georgia, serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
@@ -54,11 +55,11 @@ body {
   background: #FAF6EF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #8AA38D;
+  background: #AACFD0;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #22344A;
+  background: #2F4B4C;
 }
 
 .organic-shape-1 {
