@@ -1,38 +1,32 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
-import ContactBox from "@/components/ContactBox";
-import { Home, Laptop, Dumbbell, MapPin, CheckCircle2 } from "lucide-react";
+import { MapPin, Building, Laptop } from "lucide-react";
 
-export const metadata = {
-  title: "Mobile & Telehealth Services",
-  description: "Flexible physical therapy locations. Doctorate-level care at your home, office, telehealth, or CrossFit Shelbyville in Shelbyville, KY.",
+export const metadata: Metadata = {
+  title: "Mobile & Telehealth Physical Therapy | Prosper PT & Wellness | Shelbyville, KY",
+  description: "Physical therapy that comes to you — mobile visits, in-office appointments, and telehealth options from Prosper PT & Wellness in Shelbyville, KY.",
 };
 
-const locations = [
+const columns = [
   {
-    icon: <Home className="w-6 h-6 text-accent" />,
-    title: "In-Home & Office Visits",
-    desc: "Skip the drive and receive clinical care in the privacy of your home or office. We bring all necessary equipment (including tables, dry needling supplies, and cupping gear). Perfect for busy moms and professionals.",
+    icon: <MapPin className="w-6 h-6 text-accent" />,
+    title: "Mobile",
+    desc: "Dr. Meg or a team member comes to you: your home, your gym, or your workplace, within the Shelbyville, KY area.",
+    bestFor: "Busy schedules, home workouts, or anyone who trains at a gym like CrossFit and wants therapy in that same environment.",
   },
   {
-    icon: <Dumbbell className="w-6 h-6 text-accent" />,
-    title: "At CrossFit Shelbyville",
-    desc: "For runners, lifters, and student athletes, we offer in-gym appointments. This allows us to analyze your mechanics under direct loading (barbells, pull-up rigs, running surfaces) to adjust form and prevent injury.",
+    icon: <Building className="w-6 h-6 text-accent" />,
+    title: "In-Office",
+    desc: "Traditional physical therapy appointments at our comfortable clinical practice location.",
+    bestFor: "Patients who prefer a dedicated treatment space.",
   },
   {
     icon: <Laptop className="w-6 h-6 text-accent" />,
-    title: "Virtual Telehealth Care",
-    desc: "Access your physical therapist from anywhere. Through secure video consultations, we guide you through movement screen testing, posture corrections, and self-treatment strategies you can manage independently.",
+    title: "Telehealth",
+    desc: "Virtual physical therapy, personal training, and running coaching sessions via secure video calls.",
+    bestFor: "Follow-ups, coaching check-ins, and patients who travel or can't make it in person.",
   },
-];
-
-const perks = [
-  "No travel or waiting room times",
-  "Treatment inside your actual daily movement space",
-  "Easy scheduling around work, child care, or training",
-  "Secure virtual portal for telehealth visits",
-  "Comprehensive gear brought to your home or office",
-  "Assessing lifting/running form directly on-site",
 ];
 
 export default function MobileTelehealth() {
@@ -43,81 +37,77 @@ export default function MobileTelehealth() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn direction="up">
             <span className="font-sans text-xs uppercase tracking-widest text-secondary font-bold">
-              Care Where You Are
+              Treatment Options
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mt-4 mb-6 leading-tight">
-              Flexible appointment times and locations
+              Care That Fits Your Life
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              We bring doctorate-level care directly to you. Schedule sessions at your home, your office, online, or at CrossFit Shelbyville.
+              Not everyone can carve out time to sit in a waiting room. That's why Prosper offers three ways to get care — so your schedule and location don't get in the way of getting better.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* Locations grid */}
+      {/* 3-Column Layout */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            {locations.map((loc, index) => (
-              <FadeIn key={loc.title} direction="up" delay={index * 0.1}>
-                <div className="bg-cream rounded-3xl p-8 border border-secondary/10 hover:shadow-md transition-all duration-300 h-full flex flex-col justify-between">
+            {columns.map((col, idx) => (
+              <FadeIn key={col.title} direction="up" delay={idx * 0.1}>
+                <div className="bg-cream rounded-3xl p-8 border border-secondary/10 flex flex-col justify-between h-full hover:shadow-md transition-all duration-300">
                   <div>
-                    <div className="p-3 bg-white text-accent rounded-2xl shadow-sm w-fit mb-6">
-                      {loc.icon}
+                    <div className="p-3 bg-white text-accent rounded-2xl w-fit mb-6 shadow-sm">
+                      {col.icon}
                     </div>
-                    <h3 className="font-serif text-xl font-bold text-primary mb-3">
-                      {loc.title}
+                    <h3 className="font-serif text-2xl font-bold text-primary mb-3">
+                      {col.title}
                     </h3>
-                    <p className="font-sans text-sm text-primary/85 leading-relaxed">
-                      {loc.desc}
+                    <p className="font-sans text-sm text-primary/80 leading-relaxed mb-6">
+                      {col.desc}
                     </p>
                   </div>
-                  <div className="pt-6 mt-6 border-t border-secondary/10">
-                    <span className="font-sans text-xs font-semibold text-accent flex items-center gap-1">
-                      <MapPin className="w-3 h-3" /> Shelbyville, KY &bull; Flexible Scheduling
-                    </span>
+                  <div className="pt-6 border-t border-secondary/10">
+                    <p className="font-sans text-xs font-semibold text-secondary">
+                      <span className="uppercase text-[10px] tracking-wider text-primary/50 block mb-1">Best For</span>
+                      {col.bestFor}
+                    </p>
                   </div>
                 </div>
               </FadeIn>
             ))}
           </div>
 
-          {/* Benefits section */}
-          <div className="bg-cream rounded-3xl p-8 sm:p-12 border border-secondary/15">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-6">
-                <FadeIn direction="left">
-                  <h3 className="font-serif text-2xl sm:text-3xl font-bold text-primary mb-4">
-                    Why our clients love our flexible model
-                  </h3>
-                  <p className="font-sans text-sm text-primary/80 leading-relaxed mb-6">
-                    You shouldn't have to rearrange your entire work week or pay for child care just to receive high-quality physical therapy. By offering in-home, gym, and telehealth sessions, we make it convenient to recover without compromises.
-                  </p>
-                </FadeIn>
-              </div>
-
-              <div className="lg:col-span-6">
-                <FadeIn direction="right">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {perks.map((perk) => (
-                      <div key={perk} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4.5 h-4.5 text-accent shrink-0 mt-0.5" />
-                        <span className="font-sans text-xs font-semibold text-primary/90">
-                          {perk}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </FadeIn>
-              </div>
-            </div>
+          {/* SEO natural context block */}
+          <div className="max-w-3xl mx-auto text-center border-t border-secondary/15 pt-12">
+            <p className="font-sans text-xs text-primary/60 max-w-xl mx-auto leading-relaxed">
+              If you are looking for **mobile physical therapy in Shelbyville, KY**, convenient **home physical therapy**, secure **telehealth physical therapy in Kentucky**, or are searching for "**mobile PT near me**", we fit care to your lifestyle.
+            </p>
           </div>
+
         </div>
       </section>
 
-      {/* Reusable Contact Box */}
-      <ContactBox />
+      {/* Closing CTA */}
+      <section className="bg-primary text-cream py-16 md:py-24 text-center relative overflow-hidden">
+        <div className="relative z-10 max-w-3xl mx-auto px-4">
+          <FadeIn direction="up">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-4">
+              Wherever You Are, We'll Meet You There.
+            </h2>
+            <p className="font-sans text-base text-cream/80 max-w-md mx-auto mb-8">
+              Choose the delivery option that works for your schedule, and let's start your recovery.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-4 rounded-full bg-accent text-white font-sans text-base font-semibold shadow-md hover:bg-accent/90 hover:scale-[1.02] transition-all"
+            >
+              Start Here &rarr;
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
     </div>
   );
 }

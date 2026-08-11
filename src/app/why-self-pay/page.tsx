@@ -1,35 +1,11 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
-import ContactBox from "@/components/ContactBox";
-import { ShieldCheck, CalendarRange, Clock, CreditCard, ChevronRight } from "lucide-react";
 
-export const metadata = {
-  title: "Why Self-Pay",
-  description: "Learn how our self-pay physical therapy model in Shelbyville, KY ensures 1-on-1 time, faster results, and complete autonomy from insurance limits.",
+export const metadata: Metadata = {
+  title: "Why We're Self-Pay | Prosper PT & Wellness | Shelbyville, KY",
+  description: "Why Prosper PT & Wellness doesn't take insurance — and why that means better, more personal care. Learn how self-pay physical therapy works.",
 };
-
-const pillars = [
-  {
-    icon: <Clock className="w-6 h-6 text-accent" />,
-    title: "Full 60-Minute Sessions",
-    desc: "Typical clinics double-book or hand you off to techs after 15 minutes. At Prosper, you receive a full hour of undivided attention from your doctor of physical therapy, every single visit.",
-  },
-  {
-    icon: <ShieldCheck className="w-6 h-6 text-accent" />,
-    title: "No Insurance Constraints",
-    desc: "Insurance adjusters who have never met you shouldn't decide how many visits you get or what treatments are allowed. We operate with complete autonomy, focusing only on what actually gets you well.",
-  },
-  {
-    icon: <CalendarRange className="w-6 h-6 text-accent" />,
-    title: "Fewer Visits, Faster Healing",
-    desc: "By combining high-quality 1-on-1 care, dry needling, cupping, and targeted training in a single visit, our clients heal in fewer total sessions compared to traditional volume-based clinics.",
-  },
-  {
-    icon: <CreditCard className="w-6 h-6 text-accent" />,
-    title: "Transparent, Upfront Pricing",
-    desc: "No surprise bills in the mail six months later. You know exactly what your care costs upfront. We accept HSA and FSA cards and can provide detailed superbills for out-of-network reimbursement.",
-  },
-];
 
 export default function WhySelfPay() {
   return (
@@ -39,96 +15,67 @@ export default function WhySelfPay() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn direction="up">
             <span className="font-sans text-xs uppercase tracking-widest text-secondary font-bold">
-              The Self-Pay Model Explained
+              Our Billing Philosophy
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mt-4 mb-6 leading-tight">
-              Why we choose to operate outside of insurance networks
+              Why We Don't Take Insurance — And Why That's a Good Thing
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              Our self-pay model is designed by choice to prioritize you. We believe in providing undivided, doctorate-level care without corporate limitations.
+              If you have wondered **why physical therapy doesn't take insurance**, the answer is simple: it allows us to prioritize your actual recovery over administrative rules.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* Main Grid */}
+      {/* Narrative Section */}
       <section className="bg-white py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            
-            {/* Left Info Text */}
-            <div className="lg:col-span-5 lg:sticky lg:top-28">
-              <FadeIn direction="left">
-                <span className="font-sans text-xs uppercase tracking-widest text-secondary font-bold">
-                  The Bottom Line
-                </span>
-                <h2 className="font-serif text-3xl font-bold text-primary mt-3 mb-6">
-                  Quality care saves time and money
-                </h2>
-                <p className="font-sans text-base text-primary/80 mb-6 leading-relaxed">
-                  Traditional physical therapy clinics are forced to see 3-4 patients per hour because insurance companies keep reducing reimbursement rates. 
-                </p>
-                <p className="font-sans text-base text-primary/80 mb-8 leading-relaxed">
-                  This volume-based setup results in rushed visits, slow recovery times, and patients paying high copays for months on end. Prosper is built on a value-based model: undivided attention, expert treatment, and rapid outcomes.
-                </p>
-                <Link
-                  href="/contact"
-                  className="flex items-center justify-center w-full px-6 py-3.5 rounded-full bg-accent text-white font-sans text-sm font-semibold hover:bg-accent/90 transition-all shadow-sm"
-                >
-                  Schedule a Free Consult
-                </Link>
-              </FadeIn>
-            </div>
-
-            {/* Right Pillars List */}
-            <div className="lg:col-span-7 space-y-8">
-              {pillars.map((pillar, index) => (
-                <FadeIn key={pillar.title} direction="up" delay={index * 0.1}>
-                  <div className="bg-cream rounded-3xl p-8 border border-secondary/10 flex gap-5 items-start hover:shadow-sm transition-all duration-300">
-                    <div className="p-3 bg-white text-accent rounded-2xl shadow-sm shrink-0">
-                      {pillar.icon}
-                    </div>
-                    <div>
-                      <h3 className="font-serif text-xl font-bold text-primary mb-2">
-                        {pillar.title}
-                      </h3>
-                      <p className="font-sans text-sm text-primary/75 leading-relaxed">
-                        {pillar.desc}
-                      </p>
-                    </div>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Insurance Details Section */}
-      <section className="bg-cream py-16 md:py-24 border-t border-secondary/15">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn direction="up">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-primary text-center mb-8">
-              HSA, FSA & Out-Of-Network Submissions
-            </h2>
-            <div className="bg-white p-8 rounded-3xl border border-secondary/15 space-y-6 text-sm font-sans text-primary/85 leading-relaxed">
+            <div className="font-sans text-base sm:text-lg text-primary/85 space-y-6 leading-relaxed">
               <p>
-                <strong>HSA & FSA Accepted:</strong> Since physical therapy is a qualified medical expense, you can use your Health Savings Account (HSA) or Flexible Spending Account (FSA) cards to pay for all sessions, evaluations, and recovery work.
+                When it comes to your health, you deserve undivided attention and a recovery path built around your actual capabilities. In a traditional medical billing setup, that is rarely what happens. By choosing a **self-pay physical therapy** model, we operate entirely out-of-network, placing the control of your recovery back where it belongs: with you and your therapist.
               </p>
               <p>
-                <strong>Superbills for Reimbursement:</strong> Upon request, we can provide you with an itemized receipt (called a superbill) containing the medical codes and therapist details required by insurance companies. Many clients with out-of-network benefits successfully submit these superbills to their insurers for partial or full reimbursement.
+                In practice, choosing **cash-pay PT in Shelbyville, KY** means you never have an insurance company adjuster dictating how long your sessions can be, how many total visits you are allowed, or what specific treatment modalities you are approved to receive. Your care plan is built strictly around your personal physical goals — not billing codes or pre-authorizations.
               </p>
-              <p className="p-4 bg-cream rounded-2xl text-xs text-primary/70 border-l-4 border-accent">
-                <strong>Medicare & Medicaid Disclaimer:</strong> Due to federal regulations, we do not participate in or bill Medicare or Medicaid. We legally cannot accept Medicare or Medicaid beneficiaries for physical therapy services under a self-pay arrangement, nor can superbills be submitted to Medicare/Medicaid for reimbursement.
+              <p>
+                Our founder, Dr. Meg Raymer-Brown, built Prosper PT & Wellness this way by design. After spending seven years in corporate outpatient clinics—where therapists are routinely double-booked, appointments are rushed, and insurance limitations restrict treatment decisions—she wanted to create a change. Meg wanted the autonomy to offer patients the thorough, whole-person care they actually need to heal fully.
               </p>
+              <p>
+                Today, a growing number of active adults, runners, and seniors are choosing to invest directly in higher-quality, one-on-one care. Instead of settling for rushed corporate physical therapy visits where you spend most of your time working with aides or doing exercises you could manage at home, Prosper provides doctorate-level manual therapy, dry needling, cupping, and strength adjustments at every single session.
+              </p>
+              <p>
+                We accept Health Savings Account (HSA) and Flexible Spending Account (FSA) cards, allowing you to use tax-free funds to cover all physical therapy and wellness sessions. We are happy to provide superbills (itemized receipts) upon request, which you can submit to your insurance provider for potential out-of-network reimbursement.
+              </p>
+            </div>
+
+            {/* Note box */}
+            <div className="mt-10 p-6 bg-cream rounded-2xl border border-secondary/10 text-sm text-primary/80">
+              <strong>Please Note:</strong> Due to federal guidelines, we cannot bill Medicare or Medicaid, nor can superbills be submitted to Medicare/Medicaid for self-pay services.
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Reusable Contact Box */}
-      <ContactBox />
+      {/* Closing CTA */}
+      <section className="bg-primary text-cream py-16 md:py-24 text-center relative overflow-hidden">
+        <div className="relative z-10 max-w-3xl mx-auto px-4">
+          <FadeIn direction="up">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-4">
+              Ready to Experience the Difference?
+            </h2>
+            <p className="font-sans text-base text-cream/80 max-w-md mx-auto mb-8">
+              Take control of your recovery today with doctorate-level, 1-on-1 care designed around your life.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-4 rounded-full bg-accent text-white font-sans text-base font-semibold shadow-md hover:bg-accent/90 hover:scale-[1.02] transition-all"
+            >
+              Start Here &rarr;
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
     </div>
   );
 }
