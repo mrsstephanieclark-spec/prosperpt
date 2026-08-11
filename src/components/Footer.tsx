@@ -135,7 +135,7 @@ export default function Footer() {
             </p>
           </div>
           <div className="text-xs font-sans text-cream/50 text-center md:text-right">
-            <p>Designed with care by 10 Hats Branding</p>
+            <p>Designed with care by <a href="https://10hatsbranding.com" target="_blank" rel="noopener noreferrer" className="hover:text-cream hover:underline transition-colors underline-offset-2">10 Hats Branding</a></p>
           </div>
         </div>
       </div>
