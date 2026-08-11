@@ -80,8 +80,8 @@ export default function Home() {
       <LocalBusinessSchema />
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[85vh] flex items-center bg-[#142627] overflow-hidden">
-        {/* Full-bleed background video with moody near-black-teal gradient overlay */}
+      <section className="relative min-h-[85vh] flex items-center bg-[#3D7F81] overflow-hidden">
+        {/* Full-bleed background video with rich medium-teal gradient overlay */}
         <div className="absolute inset-0 z-0">
           <video
             autoPlay
@@ -89,12 +89,12 @@ export default function Home() {
             muted
             playsInline
             poster="/images/hero_pt_wellness.jpg"
-            className="object-cover w-full h-full opacity-60"
+            className="object-cover w-full h-full opacity-55"
           >
             <source src="/images/hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(20,38,39,0.82)_0%,rgba(20,38,39,0.82)_50%,rgba(20,38,39,0.40)_100%)]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(61,127,129,0.85)_0%,rgba(61,127,129,0.85)_50%,rgba(61,127,129,0.45)_100%)]"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-cream">
