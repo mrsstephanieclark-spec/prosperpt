@@ -1,155 +1,195 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
-import ContactBox from "@/components/ContactBox";
-import { CheckCircle2, ShieldAlert } from "lucide-react";
+import { 
+  Heart, 
+  Award, 
+  UserCheck, 
+  Users, 
+  GraduationCap, 
+  ShieldCheck 
+} from "lucide-react";
 
-export const metadata = {
-  title: "Our Story",
-  description: "Learn how Dr. Meg Raymer-Brown founded Prosper PT & Wellness to escape the limitations of corporate physical therapy and prioritize undivided patient care.",
+export const metadata: Metadata = {
+  title: "Our Story | Prosper PT & Wellness | Shelbyville, KY",
+  description: "Why Prosper PT & Wellness exists — Dr. Meg Raymer-Brown's story, our faith-driven mission, and why we built a practice around one-on-one, whole-person care.",
 };
+
+const values = [
+  {
+    icon: <Heart className="w-5 h-5 text-accent" />,
+    title: "Faith",
+    desc: "Our work is rooted in purpose and service. Prosper is a faith-based physical therapy practice built around serving others and bringing hope to our Shelbyville community.",
+  },
+  {
+    icon: <Award className="w-5 h-5 text-accent" />,
+    title: "Clinical Excellence",
+    desc: "Real expertise, not shortcuts. We provide advanced, doctorate-level treatment plans to give you top-tier results.",
+  },
+  {
+    icon: <UserCheck className="w-5 h-5 text-accent" />,
+    title: "Whole-Person Care",
+    desc: "We treat the root cause, and the whole person behind it. We look at lifestyle, goals, sleep, and stressors, not just billing codes.",
+  },
+  {
+    icon: <Users className="w-5 h-5 text-accent" />,
+    title: "Relationships",
+    desc: "You're known here, not just another chart. You will work with the same therapist every single time to ensure continuity.",
+  },
+  {
+    icon: <GraduationCap className="w-5 h-5 text-accent" />,
+    title: "Empowerment",
+    desc: "Our goal is for you to be equipped to manage your own health — not to need us forever. We equip you to stay injury-free.",
+  },
+  {
+    icon: <ShieldCheck className="w-5 h-5 text-accent" />,
+    title: "Integrity & Trust",
+    desc: "Honest, transparent care, every time. You know what you're paying upfront with no hidden costs.",
+  },
+];
 
 export default function OurStory() {
   return (
     <div>
-      {/* Editorial Header */}
+      {/* Header */}
       <section className="bg-cream py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn direction="up">
             <span className="font-sans text-xs uppercase tracking-widest text-secondary font-bold">
-              Our Backstory
+              Our Journey
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mt-4 mb-6 leading-tight">
-              Why we broke away from corporate physical therapy
+              Why Prosper Exists
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              Our founder, Dr. Meg Raymer-Brown, started Prosper PT & Wellness with a single goal: to return to a model where the patient is the only priority.
+              If you have been looking for an attentive, doctorate-level **physical therapist in Shelbyville, KY**, this is our **self-pay PT story** and our mission to provide patient-first care.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* Main Narrative */}
-      <section className="bg-white py-16 md:py-24">
+      {/* Story Section */}
+      <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* Visual Callout */}
-            <div className="lg:col-span-5 lg:sticky lg:top-28">
-              <FadeIn direction="left">
-                <div className="relative aspect-[4/5] w-full rounded-[2.5rem] overflow-hidden shadow-sm border border-secondary/15 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* Dr Meg Photo */}
+            <div className="lg:col-span-5 flex justify-center">
+              <FadeIn direction="left" className="relative w-full max-w-md">
+                <div className="aspect-[3/4] w-full rounded-[2.5rem] overflow-hidden shadow-sm border border-secondary/15 organic-shape-1">
                   <Image
                     src="/images/meg_portrait.jpg"
-                    alt="Dr. Meg Raymer-Brown, PT, DPT, Cert. DN working with a client"
+                    alt="Dr. Meg Raymer-Brown, PT, DPT, Cert. DN"
                     fill
                     className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
                   />
                 </div>
-                <div className="bg-cream p-6 rounded-2xl border border-secondary/10">
-                  <h4 className="font-serif text-base font-semibold text-primary mb-2">Our Mission</h4>
-                  <p className="font-sans text-xs text-primary/85 leading-relaxed">
-                    To deliver highly personalized, doctorate-level, 1-on-1 care that respects your autonomy, considers your lifestyle, and equips you with the tools to manage your own health for the long term.
+                <div className="absolute -bottom-4 -right-4 bg-cream px-5 py-3.5 rounded-2xl shadow-sm border border-secondary/10">
+                  <p className="font-serif text-xs font-bold text-primary">Dr. Meg Raymer-Brown</p>
+                  <p className="font-sans text-[10px] text-secondary font-medium tracking-wide uppercase mt-0.5">
+                    Founder &bull; PT, DPT, Cert. DN
                   </p>
                 </div>
               </FadeIn>
             </div>
 
-            {/* Narrative text */}
+            {/* Narrative Context */}
             <div className="lg:col-span-7">
               <FadeIn direction="right">
-                <div className="font-sans text-base text-primary/80 space-y-6 leading-relaxed">
-                  <h3 className="font-serif text-2xl font-bold text-primary">The Corporate outpatient Reality</h3>
+                <h2 className="font-serif text-3xl font-bold text-primary mb-6">
+                  A personal note from our founder
+                </h2>
+                
+                <div className="font-sans text-base text-primary/85 space-y-6 leading-relaxed mb-8">
                   <p>
-                    For seven years, Meg worked in a busy corporate outpatient physical therapy clinic. Like many dedicated therapists, she loved her patients but grew increasingly frustrated with the system. 
+                    "I spent seven years working in a busy corporate outpatient clinic. My time with patients was often rushed, and my hands were tied by insurance limitations — no matter what the patient actually needed. I watched people get sicker and sicker, and I saw how fractured healthcare had become.
                   </p>
                   <p>
-                    In that corporate setting, time with patients was severely rushed. Therapists were forced to juggle multiple clients simultaneously, passing them off to aides, technicians, or students. Even worse, health insurance limitations dictated exactly what treatments could be provided and how many sessions were allowed—regardless of what the patient actually needed.
+                    I wanted the autonomy to spend real time with patients — to be thorough, and to deliver care that considers a person's whole life, not just their injury. That's why I started Prosper: a practice built around one-on-one attention, flexibility, and whole-person care, without an insurance company standing between me and my patients.
                   </p>
                   <p>
-                    Meg watched people get sicker, treatments become more fragmented, and patient care suffer under administrative pressures. She knew there had to be a better way to practice.
-                  </p>
-
-                  <div className="p-6 bg-cream rounded-2xl border border-secondary/5 my-8">
-                    <div className="flex gap-4">
-                      <ShieldAlert className="w-6 h-6 text-accent shrink-0" />
-                      <div>
-                        <h4 className="font-serif text-sm font-semibold text-primary mb-1">
-                          The System vs. The Patient
-                        </h4>
-                        <p className="font-sans text-xs text-primary/70">
-                          Insurance-driven models force clinics to focus on volume over value. Short 15-minute windows and high copays result in incomplete recoveries and repeat injuries.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <h3 className="font-serif text-2xl font-bold text-primary pt-4">Creating Prosper PT & Wellness</h3>
-                  <p>
-                    Prosper PT & Wellness was born to restore integrity to physical therapy. Meg designed the practice as a self-pay model from day one. By operating outside the limitations of commercial health insurance networks, we gain complete freedom to prioritize you.
-                  </p>
-                  <p>
-                    Alongside Dr. Whitney Ensor and Dr. Kim Wilson, the practice offers undivided, doctorate-level care. Every appointment is a full hour, spent entirely 1-on-1 with the same therapist. 
-                  </p>
-                  <p>
-                    We take a whole-person approach. We don't just treat the spot that hurts; we look at your movement patterns, lifestyle, stress, sleep, and personal goals. Whether your objective is to return to running, walk without pelvic pain, play with your grandchildren, or lift weights, we align your plan with what you love.
-                  </p>
-                  <p className="font-medium text-primary">
-                    Our ultimate goal is to equip you to self-manage so that you don't need us forever. We want to empower you with the resilience, strength, and education to prevent future injuries and stay active.
+                    The name Prosper comes from Jeremiah 29:11 — a reminder that this work is about more than fixing pain. It's about hope, purpose, and helping people get back to full, active lives."
                   </p>
                 </div>
+
+                {/* Pull-quote block */}
+                <div className="bg-cream p-6 rounded-2xl border border-secondary/10 relative">
+                  <span className="absolute top-1 left-2 text-5xl text-secondary/15 font-serif select-none">“</span>
+                  <blockquote className="font-serif text-base italic text-primary/95 leading-relaxed mb-3 pl-4">
+                    "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."
+                  </blockquote>
+                  <cite className="font-sans text-[10px] font-semibold text-secondary not-italic uppercase tracking-wider block text-right">
+                    &mdash; Jeremiah 29:11
+                  </cite>
+                </div>
+
               </FadeIn>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* Core Values Section */}
-      <section className="bg-cream py-16 md:py-24 border-t border-secondary/15">
+      {/* Values Section */}
+      <section className="bg-cream py-20 md:py-28 border-t border-secondary/15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <FadeIn direction="up">
-              <h2 className="font-serif text-3xl font-bold text-primary">Our Core Values</h2>
-              <p className="font-sans text-sm text-primary/75 mt-3">
-                The principles that guide how we treat, interact, and support our Shelbyville community.
+              <span className="font-sans text-xs uppercase tracking-widest text-secondary font-bold">
+                Our Standards
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary mt-3 mb-4">
+                What We Believe
+              </h2>
+              <p className="font-sans text-base text-primary/70">
+                These core standards guide how we serve our patients and build relationships in Shelbyville.
               </p>
             </FadeIn>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FadeIn direction="up">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-secondary/5 h-full">
-                <CheckCircle2 className="w-6 h-6 text-accent mb-4" />
-                <h4 className="font-serif text-lg font-bold text-primary mb-2">Patient Autonomy</h4>
-                <p className="font-sans text-xs text-primary/80 leading-relaxed">
-                  We believe you should have control over your recovery. You and your doctor decide when you are healed, not an insurance adjuster in a distant office.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.1}>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-secondary/5 h-full">
-                <CheckCircle2 className="w-6 h-6 text-accent mb-4" />
-                <h4 className="font-serif text-lg font-bold text-primary mb-2">Uncompromised Quality</h4>
-                <p className="font-sans text-xs text-primary/80 leading-relaxed">
-                  We never double-book clients or delegate your care to assistants. Every session is one-on-one with a doctorate-level clinical specialist.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.2}>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-secondary/5 h-full">
-                <CheckCircle2 className="w-6 h-6 text-accent mb-4" />
-                <h4 className="font-serif text-lg font-bold text-primary mb-2">Whole-Person Perspective</h4>
-                <p className="font-sans text-xs text-primary/80 leading-relaxed">
-                  We consider your sleep, lifestyle, stress, nutrition, and personal goals. True wellness requires looking at the big picture, not just the isolated injury.
-                </p>
-              </div>
-            </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((val, index) => (
+              <FadeIn key={val.title} direction="up" delay={index * 0.05}>
+                <div className="bg-white rounded-3xl p-8 border border-secondary/5 h-full flex flex-col justify-between hover:shadow-sm transition-all duration-300">
+                  <div>
+                    <div className="p-3 bg-cream text-accent rounded-2xl w-fit mb-6">
+                      {val.icon}
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-primary mb-3">
+                      {val.title}
+                    </h3>
+                    <p className="font-sans text-sm text-primary/80 leading-relaxed font-normal">
+                      {val.desc}
+                    </p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Reusable Contact Box */}
-      <ContactBox />
+      {/* Closing CTA */}
+      <section className="bg-primary text-cream py-16 md:py-24 text-center relative overflow-hidden">
+        <div className="relative z-10 max-w-3xl mx-auto px-4">
+          <FadeIn direction="up">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-4">
+              Ready to Feel Seen and Heard?
+            </h2>
+            <p className="font-sans text-base text-cream/80 max-w-md mx-auto mb-8">
+              Experience the difference of faith-based, patient-first physical therapy built around your actual lifestyle goals.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-4 rounded-full bg-accent text-white font-sans text-base font-semibold shadow-md hover:bg-accent/90 hover:scale-[1.02] transition-all"
+            >
+              Start Here &rarr;
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
     </div>
   );
 }

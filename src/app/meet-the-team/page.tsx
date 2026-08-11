@@ -1,50 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
-import ContactBox from "@/components/ContactBox";
-import { GraduationCap, Award, Heart } from "lucide-react";
+import { Award, ShieldCheck, Heart } from "lucide-react";
 
-export const metadata = {
-  title: "Meet the Team",
-  description: "Get to know Dr. Meg Raymer-Brown, Dr. Whitney Ensor, and Dr. Kim Wilson. Our doctorate-level physical therapists offer 1-on-1 care in Shelbyville, KY.",
+export const metadata: Metadata = {
+  title: "Meet the Team | Prosper PT & Wellness | Shelbyville, KY",
+  description: "Meet Dr. Meg Raymer-Brown, Dr. Whitney Ensor, and Dr. Kim Wilson — the doctorate-level physical therapists behind Prosper PT & Wellness in Shelbyville, KY.",
 };
 
 const team = [
   {
-    name: "Dr. Meg Raymer-Brown",
-    title: "PT, DPT, Cert. DN",
+    name: "Dr. Meg Raymer-Brown, PT, DPT, Cert. DN",
     role: "Founder & Doctor of Physical Therapy",
     image: "/images/meg_portrait.jpg",
-    bio: "Dr. Meg Raymer-Brown founded Prosper PT & Wellness to escape the constraints of typical corporate outpatient clinics. Meg holds a Doctorate in Physical Therapy and is certified in Dry Needling. She specializes in orthopedics, sports rehabilitation, and dry needling. Meg is passionate about active lifestyle maintenance, helping runners, weightlifters, and local families stay active and resilient.",
-    specialties: ["Dry Needling", "Sports Injury Rehab", "Back & Neck Pain", "Headache Relief"],
-    education: "Doctor of Physical Therapy (DPT)",
+    tags: ["Orthopedic & Sports Rehab", "Dry Needling", "Mobile PT"],
+    bio: "Meg founded Prosper after seven years in corporate outpatient care, where rushed appointments and insurance limitations kept her from giving patients the care they deserved. She built Prosper around one-on-one attention, whole-person care, and the flexibility to meet patients where they are — at home, at the gym, or in the office. As a dry needling therapist in Shelbyville, she helps patients achieve lasting pain relief and mobility.",
   },
   {
-    name: "Dr. Whitney Ensor",
-    title: "PT, DPT",
+    name: "Dr. Whitney Ensor, PT, DPT",
     role: "Doctor of Physical Therapy",
     image: "/images/whitney_portrait.jpg",
-    bio: "Dr. Whitney Ensor specializes in pelvic and bladder health, helping both men and women manage dysfunction, incontinence, and chronic pelvic pain. She also provides dedicated postpartum recovery and prenatal support. Whitney's gentle, evidence-based approach helps clients regain comfort and confidence in their body's strength and natural movement patterns.",
-    specialties: ["Pelvic Floor Rehab (Male & Female)", "Postpartum Recovery", "Bladder Dysfunction", "Incontinence Care"],
-    education: "Doctor of Physical Therapy (DPT)",
+    tags: ["Women's Health", "Running Performance", "Personal Training"],
+    bio: "Whitney works with active women and runners of all levels, blending clinical expertise with performance coaching to help patients move — and perform — without limitations. She is highly passionate about pelvic floor rehabilitation and active maternity recovery.",
   },
   {
-    name: "Dr. Kim Wilson",
-    title: "PT, DPT",
+    name: "Dr. Kim Wilson, PT, DPT",
     role: "Doctor of Physical Therapy",
     image: "/images/kim_portrait.jpg",
-    bio: "Dr. Kim Wilson focuses on running performance, student athletes, and in-home physical therapy. She brings years of clinical experience in orthopedics and performance training. Kim loves working with runners, utilizing video gait analysis and strength programming, and provides flexible mobile therapy options that fit the schedules of busy families and professionals.",
-    specialties: ["Running Gait Analysis", "Student Athlete Coaching", "Orthopedic Rehab", "Mobile In-Home Therapy"],
-    education: "Doctor of Physical Therapy (DPT)",
+    tags: ["Pelvic Health", "Wound Care", "Complex Conditions"],
+    bio: "Kim treats pelvic health and incontinence in both men and women, along with wound care and complex conditions, bringing a thorough, whole-person approach to every patient she sees. She is recognized as a dedicated pelvic health therapist in Kentucky.",
   },
 ];
 
 export default function MeetTheTeam() {
-  // Generate Person Schema markup
   const personSchemas = team.map((member) => ({
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": member.name,
+    "name": member.name.split(",")[0],
     "jobTitle": member.role,
     "worksFor": {
       "@type": "LocalBusiness",
@@ -73,13 +66,13 @@ export default function MeetTheTeam() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn direction="up">
             <span className="font-sans text-xs uppercase tracking-widest text-secondary font-bold">
-              Our Therapists
+              Our Clinicians
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mt-4 mb-6 leading-tight">
-              Meet our doctorate-level clinical specialists
+              Meet the Team Behind Prosper
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              At Prosper, you are never passed off to an assistant, tech, or student. You work 1-on-1 with your own doctor at every visit.
+              If you are looking for trusted, doctorate-level **Shelbyville, KY physical therapists**, our clinical experts provide direct access care designed around your lifestyle.
             </p>
           </FadeIn>
         </div>
@@ -104,7 +97,7 @@ export default function MeetTheTeam() {
                     <div className="aspect-[3/4] w-full rounded-[2.5rem] overflow-hidden shadow-sm border border-secondary/15 organic-shape-1">
                       <Image
                         src={member.image}
-                        alt={`${member.name}, ${member.title}`}
+                        alt={member.name}
                         fill
                         className="object-cover"
                         sizes="(max-width: 1024px) 100vw, 33vw"
@@ -123,40 +116,34 @@ export default function MeetTheTeam() {
                     <span className="font-sans text-xs uppercase tracking-widest text-secondary font-bold">
                       {member.role}
                     </span>
-                    <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary mt-2 mb-1">
+                    <h2 className="font-serif text-3xl font-bold text-primary mt-2 mb-4 leading-tight">
                       {member.name}
                     </h2>
-                    <p className="font-sans text-sm font-semibold text-accent mb-6">
-                      {member.title}
-                    </p>
                     
-                    <p className="font-sans text-base text-primary/80 mb-8 leading-relaxed">
+                    {/* Specialty tags */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {member.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3.5 py-1.5 bg-cream text-primary font-sans text-xs font-semibold rounded-full border border-secondary/10"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <p className="font-sans text-base text-primary/80 mb-6 leading-relaxed">
                       {member.bio}
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-secondary/10">
-                      {/* Education info */}
-                      <div className="flex gap-3">
-                        <GraduationCap className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                        <div>
-                          <h4 className="font-serif text-sm font-semibold text-primary">Education</h4>
-                          <p className="font-sans text-xs text-primary/70 mt-1">{member.education}</p>
-                        </div>
-                      </div>
-
-                      {/* Specialties info */}
-                      <div className="flex gap-3">
-                        <Award className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                        <div>
-                          <h4 className="font-serif text-sm font-semibold text-primary">Specialties</h4>
-                          <ul className="list-disc list-inside font-sans text-xs text-primary/70 mt-1 space-y-1">
-                            {member.specialties.map((spec) => (
-                              <li key={spec}>{spec}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
+                    {/* Quality statement reinforcement */}
+                    <div className="p-4 bg-cream rounded-2xl border border-secondary/10 flex items-start gap-3">
+                      <ShieldCheck className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                      <p className="font-sans text-xs text-primary/80 leading-relaxed font-semibold">
+                        At Prosper, you will always work directly and consistently with your own therapist. Your care is never passed off to aides, techs, or student assistants.
+                      </p>
                     </div>
+
                   </FadeIn>
                 </div>
               </div>
@@ -165,8 +152,25 @@ export default function MeetTheTeam() {
         </div>
       </section>
 
-      {/* Reusable Contact Box */}
-      <ContactBox />
+      {/* Closing CTA */}
+      <section className="bg-primary text-cream py-16 md:py-24 text-center relative overflow-hidden">
+        <div className="relative z-10 max-w-3xl mx-auto px-4">
+          <FadeIn direction="up">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-4">
+              Ready to Work With a Therapist Who Actually Knows You?
+            </h2>
+            <p className="font-sans text-base text-cream/80 max-w-md mx-auto mb-8">
+              Experience the continuity of care that only comes from seeing the same doctor of physical therapy at every visit.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-4 rounded-full bg-accent text-white font-sans text-base font-semibold shadow-md hover:bg-accent/90 hover:scale-[1.02] transition-all"
+            >
+              Start Here &rarr;
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
     </div>
   );
 }
