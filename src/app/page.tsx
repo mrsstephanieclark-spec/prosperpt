@@ -44,7 +44,7 @@ const whyChooseUs = [
   {
     icon: <CalendarRange className="w-5 h-5 text-accent" />,
     title: "Flexible by Design",
-    desc: "Mobile visits, in-office appointments, or telehealth — care that fits your schedule and location, not the other way around.",
+    desc: "Mobile visits, in-office appointments, telehealth, and extended hours to fit your schedule and location, not the other way around.",
   },
   {
     icon: <HeartHandshake className="w-5 h-5 text-accent" />,

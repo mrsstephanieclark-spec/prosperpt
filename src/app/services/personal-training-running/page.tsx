@@ -103,7 +103,7 @@ export default function PersonalTrainingRunning() {
                     Who This Is For
                   </h3>
                   <p className="font-sans text-sm text-primary/80 leading-relaxed mb-6">
-                    Active adults who want to train with a professional who understands injury prevention, runners who keep getting sidelined by the same nagging issues, and anyone who wants a fitness plan built around their real goals.
+                    Active adults who want to train with a professional who understands injury prevention, runners and swimmers who keep getting sidelined by the same nagging issues, student athletes looking to elevate their performance safely, and anyone who wants a fitness plan built around their real goals.
                   </p>
                   <Link
                     href="/contact"
