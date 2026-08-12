@@ -91,7 +91,7 @@ export default function Home() {
             poster="/images/hero_pt_wellness.jpg"
             className="object-cover w-full h-full opacity-55"
           >
-            <source src="/images/hero.mp4" type="video/mp4" />
+            <source src="/images/updated-hero-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(61,127,129,0.85)_0%,rgba(61,127,129,0.85)_50%,rgba(61,127,129,0.45)_100%)]"></div>
