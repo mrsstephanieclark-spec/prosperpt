@@ -71,6 +71,16 @@ export default function RecoveryRedLightTherapy() {
                   ))}
                 </div>
 
+                {/* Torso device therapy showcase */}
+                <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-sm border border-secondary/15 mb-8">
+                  <Image
+                    src="/images/5.jpg"
+                    alt="Close-up of cellular healing device application during localized pain management recovery session"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
                 <div className="p-6 bg-cream rounded-2xl border-l-4 border-accent">
                   <h4 className="font-serif text-sm font-bold text-primary mb-1">
                     Advanced Cellular Healing
@@ -87,8 +97,8 @@ export default function RecoveryRedLightTherapy() {
               <FadeIn direction="right">
                 <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-sm border border-secondary/15 mb-8">
                   <Image
-                    src="/images/recovery_recovery.jpg"
-                    alt="Clinical red light panels and HEALiX recovery room setup"
+                    src="/images/6.jpg"
+                    alt="Applying local red light recovery device to client's knee joint to reduce pain and inflammation"
                     fill
                     className="object-cover"
                   />

@@ -16,28 +16,28 @@ const serviceCards = [
     description: "Orthopedic and sports rehab, dry needling, manual therapy, cupping, and kinesiotaping.",
     href: "/services/physical-therapy",
     icon: <Activity className="w-6 h-6 text-accent" />,
-    image: "/images/hero_pt_wellness.jpg",
+    image: "/images/1.jpg",
   },
   {
     title: "Women's & Pelvic Health",
     description: "Pelvic health, incontinence (male and female), fertility-related conditions, and pre/postnatal care.",
     href: "/services/pelvic-health",
     icon: <ShieldCheck className="w-6 h-6 text-accent" />,
-    image: "/images/pelvic_health.jpg",
+    image: "/images/10.jpg",
   },
   {
     title: "Personal Training & Running Coaching",
     description: "General wellness, strength, sport-specific training, and running performance coaching.",
     href: "/services/personal-training-running",
     icon: <Dumbbell className="w-6 h-6 text-accent" />,
-    image: "/images/running_performance.jpg",
+    image: "/images/11.jpg",
   },
   {
     title: "Recovery & Red Light Therapy",
     description: "Kineon Move+Pro rental and HEALiX infrared blanket sessions for recovery and maintenance care.",
     href: "/services/recovery-red-light-therapy",
     icon: <Zap className="w-6 h-6 text-accent" />,
-    image: "/images/recovery_recovery.jpg",
+    image: "/images/6.jpg",
   },
 ];
 

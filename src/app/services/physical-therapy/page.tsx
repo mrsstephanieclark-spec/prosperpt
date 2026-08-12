@@ -83,6 +83,26 @@ export default function PhysicalTherapy() {
                   ))}
                 </div>
 
+                {/* Hands-on manual therapy techniques showcase */}
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div className="relative aspect-[3/2] w-full rounded-2xl overflow-hidden shadow-sm border border-secondary/15">
+                    <Image
+                      src="/images/3.jpg"
+                      alt="Close-up of physical therapist performing manual therapy and soft tissue release on patient's lower back"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative aspect-[3/2] w-full rounded-2xl overflow-hidden shadow-sm border border-secondary/15">
+                    <Image
+                      src="/images/4.jpg"
+                      alt="Close-up of therapist performing neck mobilization technique to relieve tension and cervical headaches"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+
                 <div className="p-6 bg-cream rounded-2xl border-l-4 border-accent">
                   <h4 className="font-serif text-sm font-bold text-primary mb-1">
                     Specialized Local Care
@@ -99,8 +119,8 @@ export default function PhysicalTherapy() {
               <FadeIn direction="right">
                 <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-sm border border-secondary/15 mb-8">
                   <Image
-                    src="/images/hero_pt_wellness.jpg"
-                    alt="Orthopedic and sports physical therapy stretch session"
+                    src="/images/1.jpg"
+                    alt="Doctor of Physical Therapy performing lower back and hip manual mobilization on patient"
                     fill
                     className="object-cover"
                   />

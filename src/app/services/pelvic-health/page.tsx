@@ -79,6 +79,16 @@ export default function PelvicHealth() {
                   ))}
                 </div>
 
+                {/* Core and pelvic stretching showcase */}
+                <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-sm border border-secondary/15 mb-8">
+                  <Image
+                    src="/images/9.jpg"
+                    alt="Therapist assisting a patient with hip flexor and pelvic floor stretching on a treatment mat"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
                 <div className="p-6 bg-cream rounded-2xl border-l-4 border-accent">
                   <h4 className="font-serif text-sm font-bold text-primary mb-1">
                     Specialized Pelvic Support
@@ -95,8 +105,8 @@ export default function PelvicHealth() {
               <FadeIn direction="right">
                 <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-sm border border-secondary/15 mb-8">
                   <Image
-                    src="/images/pelvic_health.jpg"
-                    alt="Pelvic health physical therapy consultation session"
+                    src="/images/10.jpg"
+                    alt="Clinician assisting patient with floor core alignment and pilates-style pelvic stability exercise"
                     fill
                     className="object-cover"
                   />

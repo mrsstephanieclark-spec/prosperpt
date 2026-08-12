@@ -148,8 +148,8 @@ export default function Home() {
               </FadeIn>
             </div>
 
-            {/* Scripture quote */}
-            <div className="lg:col-span-5">
+            {/* Scripture quote & client photo */}
+            <div className="lg:col-span-5 space-y-6">
               <FadeIn direction="right" className="bg-white p-8 rounded-3xl border border-secondary/15 shadow-sm relative">
                 <span className="absolute -top-4 -left-4 text-6xl text-secondary/15 font-serif select-none">“</span>
                 <blockquote className="font-serif text-lg md:text-xl italic text-primary/90 leading-relaxed mb-4">
@@ -158,6 +158,16 @@ export default function Home() {
                 <cite className="font-sans text-xs font-semibold text-secondary not-italic uppercase tracking-wider block text-right">
                   &mdash; Jeremiah 29:11
                 </cite>
+              </FadeIn>
+              <FadeIn direction="right" delay={0.1}>
+                <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-sm border border-secondary/15">
+                  <Image
+                    src="/images/8.jpg"
+                    alt="Prosper therapist demonstrating a standing lunge stretch to a client in a fitness setting"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </FadeIn>
             </div>
           </div>

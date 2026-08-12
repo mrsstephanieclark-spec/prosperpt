@@ -114,15 +114,25 @@ export default function OurStory() {
                   </p>
                 </div>
 
-                {/* Pull-quote block */}
-                <div className="bg-cream p-6 rounded-2xl border border-secondary/10 relative">
-                  <span className="absolute top-1 left-2 text-5xl text-secondary/15 font-serif select-none">“</span>
-                  <blockquote className="font-serif text-base italic text-primary/95 leading-relaxed mb-3 pl-4">
-                    "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."
-                  </blockquote>
-                  <cite className="font-sans text-[10px] font-semibold text-secondary not-italic uppercase tracking-wider block text-right">
-                    &mdash; Jeremiah 29:11
-                  </cite>
+                {/* Pull-quote block & client photo */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                  <div className="bg-cream p-6 rounded-2xl border border-secondary/10 relative h-fit">
+                    <span className="absolute top-1 left-2 text-5xl text-secondary/15 font-serif select-none">“</span>
+                    <blockquote className="font-serif text-base italic text-primary/95 leading-relaxed mb-3 pl-4">
+                      "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."
+                    </blockquote>
+                    <cite className="font-sans text-[10px] font-semibold text-secondary not-italic uppercase tracking-wider block text-right">
+                      &mdash; Jeremiah 29:11
+                    </cite>
+                  </div>
+                  <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-sm border border-secondary/15">
+                    <Image
+                      src="/images/2.jpg"
+                      alt="Physical therapist performing hands-on soft tissue manipulation and joint alignment on patient's hip and lower back"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
 
               </FadeIn>

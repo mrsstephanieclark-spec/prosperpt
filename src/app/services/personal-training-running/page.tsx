@@ -75,6 +75,16 @@ export default function PersonalTrainingRunning() {
                   ))}
                 </div>
 
+                {/* Standing resistance band showcase */}
+                <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-sm border border-secondary/15 mb-8">
+                  <Image
+                    src="/images/12.jpg"
+                    alt="Trainer coaching client during standing resistance band exercise for strength and run preparation"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
                 <div className="p-6 bg-cream rounded-2xl border-l-4 border-accent">
                   <h4 className="font-serif text-sm font-bold text-primary mb-1">
                     Resilient Fitness Programs
@@ -91,8 +101,8 @@ export default function PersonalTrainingRunning() {
               <FadeIn direction="right">
                 <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-sm border border-secondary/15 mb-8">
                   <Image
-                    src="/images/running_performance.jpg"
-                    alt="Runner training outside under natural daylight"
+                    src="/images/11.jpg"
+                    alt="Personal trainer coaching client on standing stability and alignment during exercise"
                     fill
                     className="object-cover"
                   />

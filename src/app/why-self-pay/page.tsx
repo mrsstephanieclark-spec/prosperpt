@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
 
@@ -29,31 +30,61 @@ export default function WhySelfPay() {
 
       {/* Narrative Section */}
       <section className="bg-white py-20 md:py-28">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn direction="up">
-            <div className="font-sans text-base sm:text-lg text-primary/85 space-y-6 leading-relaxed">
-              <p>
-                When it comes to your health, you deserve undivided attention and a recovery path built around your actual capabilities. In a traditional medical billing setup, that is rarely what happens. By choosing a **self-pay physical therapy** model, we operate entirely out-of-network, placing the control of your recovery back where it belongs: with you and your therapist.
-              </p>
-              <p>
-                In practice, choosing **cash-pay PT in Shelbyville, KY** means you never have an insurance company adjuster dictating how long your sessions can be, how many total visits you are allowed, or what specific treatment modalities you are approved to receive. Your care plan is built strictly around your personal physical goals — not billing codes or pre-authorizations.
-              </p>
-              <p>
-                Our founder, Dr. Meg Raymer-Brown, built Prosper PT & Wellness this way by design. After spending seven years in corporate outpatient clinics—where therapists are routinely double-booked, appointments are rushed, and insurance limitations restrict treatment decisions—she wanted to create a change. Meg wanted the autonomy to offer patients the thorough, whole-person care they actually need to heal fully.
-              </p>
-              <p>
-                Today, a growing number of active adults, runners, and seniors are choosing to invest directly in higher-quality, one-on-one care. Instead of settling for rushed corporate physical therapy visits where you spend most of your time working with aides or doing exercises you could manage at home, Prosper provides doctorate-level manual therapy, dry needling, cupping, and strength adjustments at every single session.
-              </p>
-              <p>
-                We accept Health Savings Account (HSA) and Flexible Spending Account (FSA) cards, allowing you to use tax-free funds to cover all physical therapy and wellness sessions. We are happy to provide superbills (itemized receipts) upon request, which you can submit to your insurance provider for potential out-of-network reimbursement.
-              </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            {/* Left Column - Narrative Text */}
+            <div className="lg:col-span-7">
+              <FadeIn direction="left">
+                <div className="font-sans text-base sm:text-lg text-primary/85 space-y-6 leading-relaxed">
+                  <p>
+                    When it comes to your health, you deserve undivided attention and a recovery path built around your actual capabilities. In a traditional medical billing setup, that is rarely what happens. By choosing a **self-pay physical therapy** model, we operate entirely out-of-network, placing the control of your recovery back where it belongs: with you and your therapist.
+                  </p>
+                  <p>
+                    In practice, choosing **cash-pay PT in Shelbyville, KY** means you never have an insurance company adjuster dictating how long your sessions can be, how many total visits you are allowed, or what specific treatment modalities you are approved to receive. Your care plan is built strictly around your personal physical goals — not billing codes or pre-authorizations.
+                  </p>
+                  <p>
+                    Our founder, Dr. Meg Raymer-Brown, built Prosper PT & Wellness this way by design. After spending seven years in corporate outpatient clinics—where therapists are routinely double-booked, appointments are rushed, and insurance limitations restrict treatment decisions—she wanted to create a change. Meg wanted the autonomy to offer patients the thorough, whole-person care they actually need to heal fully.
+                  </p>
+                  <p>
+                    Today, a growing number of active adults, runners, and seniors are choosing to invest directly in higher-quality, one-on-one care. Instead of settling for rushed corporate physical therapy visits where you spend most of your time working with aides or doing exercises you could manage at home, Prosper provides doctorate-level manual therapy, dry needling, cupping, and strength adjustments at every single session.
+                  </p>
+                  <p>
+                    We accept Health Savings Account (HSA) and Flexible Spending Account (FSA) cards, allowing you to use tax-free funds to cover all physical therapy and wellness sessions. We are happy to provide superbills (itemized receipts) upon request, which you can submit to your insurance provider for potential out-of-network reimbursement.
+                  </p>
+                </div>
+
+                {/* Note box */}
+                <div className="mt-10 p-6 bg-cream rounded-2xl border border-secondary/10 text-sm text-primary/80">
+                  <strong>Please Note:</strong> Due to federal guidelines, we cannot bill Medicare or Medicaid, nor can superbills be submitted to Medicare/Medicaid for self-pay services.
+                </div>
+              </FadeIn>
             </div>
 
-            {/* Note box */}
-            <div className="mt-10 p-6 bg-cream rounded-2xl border border-secondary/10 text-sm text-primary/80">
-              <strong>Please Note:</strong> Due to federal guidelines, we cannot bill Medicare or Medicaid, nor can superbills be submitted to Medicare/Medicaid for self-pay services.
+            {/* Right Column - Client Photo & Caption */}
+            <div className="lg:col-span-5 lg:sticky lg:top-28">
+              <FadeIn direction="right">
+                <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-sm border border-secondary/15 mb-8">
+                  <Image
+                    src="/images/7.jpg"
+                    alt="Close-up of physical therapy recovery device being adjusted by gloved therapist for patient's treatment session"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <div className="bg-cream rounded-3xl p-8 border border-secondary/15">
+                  <h3 className="font-serif text-xl font-bold text-primary mb-4">
+                    Advanced Therapeutic Tools
+                  </h3>
+                  <p className="font-sans text-sm text-primary/80 leading-relaxed">
+                    By operating outside of insurance rules, we are free to utilize state-of-the-art modalities—including dry needling, cupping, and clinical-grade red light therapy—whenever they serve your recovery goals, at no extra cost.
+                  </p>
+                </div>
+              </FadeIn>
             </div>
-          </FadeIn>
+
+          </div>
         </div>
       </section>
 
