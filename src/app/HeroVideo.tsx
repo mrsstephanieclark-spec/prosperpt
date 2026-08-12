@@ -27,7 +27,7 @@ export default function HeroVideo() {
       onLoadedMetadata={setPlaySpeed}
       onCanPlay={setPlaySpeed}
     >
-      <source src="/images/updated-hero-video.mp4?v=2" type="video/mp4" />
+      <source src="/images/updated-hero-video.mp4?v=3" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   );
