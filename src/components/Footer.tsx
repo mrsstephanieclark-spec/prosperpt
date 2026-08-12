@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,28 +8,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Practice Info */}
           <div className="md:col-span-2 pr-4">
-            <Link href="/" className="flex items-center gap-2 mb-4 group">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                className="w-8 h-8 text-secondary transition-transform duration-300 group-hover:rotate-12"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 3v18M12 3C9.5 7.5 5 10 5 12c0 3.866 3.134 7 7 7s7-3.134 7-7c0-2-4.5-4.5-7-9z"
-                />
-              </svg>
-              <div className="flex flex-col">
-                <span className="font-serif text-lg font-semibold tracking-wide text-cream leading-none">
-                  PROSPER
-                </span>
-                <span className="font-sans text-[10px] tracking-[0.15em] text-secondary font-medium">
-                  PT & WELLNESS
-                </span>
-              </div>
+            <Link href="/" className="flex items-center group">
+              <Image
+                src="/images/logo.png"
+                alt="Prosper PT & Wellness Logo"
+                width={180}
+                height={120}
+                className="h-12 w-auto object-contain brightness-0 invert transition-transform duration-300 group-hover:scale-[1.02]"
+              />
             </Link>
             <p className="font-sans text-sm text-cream/70 max-w-sm mb-6 leading-relaxed">
               Dr. Meg Raymer-Brown, PT, DPT, Cert. DN alongside Dr. Whitney Ensor and Dr. Kim Wilson. 
