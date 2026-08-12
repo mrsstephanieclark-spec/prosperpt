@@ -10,11 +10,11 @@ export default function Footer() {
           <div className="md:col-span-2 pr-4">
             <Link href="/" className="flex items-center group">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-cropped.png"
                 alt="Prosper PT & Wellness Logo"
-                width={180}
-                height={120}
-                className="h-12 w-auto object-contain brightness-0 invert transition-transform duration-300 group-hover:scale-[1.02]"
+                width={200}
+                height={113}
+                className="h-16 w-auto object-contain brightness-0 invert transition-transform duration-300 group-hover:scale-[1.02]"
               />
             </Link>
             <p className="font-sans text-sm text-cream/70 max-w-sm mb-6 leading-relaxed">

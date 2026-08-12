@@ -66,11 +66,11 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-cropped.png"
               alt="Prosper PT & Wellness Logo"
-              width={180}
-              height={120}
-              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+              width={200}
+              height={113}
+              className="h-16 md:h-18 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               priority
             />
           </Link>
