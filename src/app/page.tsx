@@ -6,7 +6,6 @@ import ContactForm from "@/components/ContactForm";
 import FadeIn from "@/components/FadeIn";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import TestimonialsSlider from "./TestimonialsSlider";
-import HeroVideo from "./HeroVideo";
 import { 
   ArrowRight, 
   Check, 
@@ -82,10 +81,20 @@ export default function Home() {
 
       {/* HERO SECTION */}
       <section className="relative min-h-[85vh] flex items-center bg-[#3D7F81] overflow-hidden">
-        {/* Full-bleed background video with rich medium-teal gradient overlay */}
+        {/* Full-bleed background video with rich asymmetric medium-teal gradient overlay */}
         <div className="absolute inset-0 z-0">
-          <HeroVideo />
-          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(61,127,129,0.85)_0%,rgba(61,127,129,0.85)_50%,rgba(61,127,129,0.45)_100%)]"></div>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/images/hero_pt_wellness.jpg"
+            className="object-cover w-full h-full opacity-85 object-[right_30%]"
+          >
+            <source src="/images/updated-hero-video.mp4?v=3" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(61,127,129,0.88)_0%,rgba(61,127,129,0.75)_40%,rgba(61,127,129,0.20)_75%,rgba(61,127,129,0.05)_100%)]"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-cream">
