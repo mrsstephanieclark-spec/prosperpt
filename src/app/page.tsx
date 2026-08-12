@@ -91,14 +91,14 @@ export default function Home() {
             poster="/images/hero_pt_wellness.jpg"
             className="object-cover w-full h-full opacity-85 object-[right_30%]"
           >
-            <source src="/images/updated-hero-video.mp4?v=3" type="video/mp4" />
+            <source src="/images/updated-hero-video.mp4?v=4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(61,127,129,0.88)_0%,rgba(61,127,129,0.75)_40%,rgba(61,127,129,0.20)_75%,rgba(61,127,129,0.05)_100%)]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(61,127,129,0.92)_0%,rgba(61,127,129,0.85)_35%,rgba(61,127,129,0.15)_65%,rgba(61,127,129,0.0)_85%)]"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-cream">
-          <div className="max-w-2xl">
+          <div className="max-w-xl lg:max-w-[40%] w-full">
             <FadeIn direction="left">
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
                 Move Better. Feel Great. Live Well.
