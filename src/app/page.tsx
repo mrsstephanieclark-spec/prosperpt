@@ -6,6 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import FadeIn from "@/components/FadeIn";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import TestimonialsSlider from "./TestimonialsSlider";
+import HeroVideo from "./HeroVideo";
 import { 
   ArrowRight, 
   Check, 
@@ -83,17 +84,7 @@ export default function Home() {
       <section className="relative min-h-[85vh] flex items-center bg-[#3D7F81] overflow-hidden">
         {/* Full-bleed background video with rich asymmetric medium-teal gradient overlay */}
         <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="/images/hero_pt_wellness.jpg"
-            className="object-cover w-full h-full opacity-85 object-[right_30%] scale-105 origin-right"
-          >
-            <source src="/images/updated-hero-video.mp4?v=4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <HeroVideo />
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(61,127,129,0.92)_0%,rgba(61,127,129,0.85)_30%,rgba(61,127,129,0.10)_55%,rgba(61,127,129,0.0)_75%)]"></div>
         </div>
 
