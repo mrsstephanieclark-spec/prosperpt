@@ -13,21 +13,21 @@ const team = [
   {
     name: "Dr. Meg Raymer-Brown, PT, DPT, Cert. DN",
     role: "Founder & Doctor of Physical Therapy",
-    image: "/images/meg_portrait.jpg",
+    image: "/images/meg.png",
     tags: ["Orthopedic & Sports Rehab", "Dry Needling", "Mobile PT"],
     bio: "Meg founded Prosper after seven years in corporate outpatient care, where rushed appointments and insurance limitations kept her from giving patients the care they deserved. She built Prosper around one-on-one attention, whole-person care, and the flexibility to meet patients where they are — at home, at the gym, or in the office. As a dry needling therapist in Shelbyville, she helps patients achieve lasting pain relief and mobility.",
   },
   {
     name: "Dr. Whitney Ensor, PT, DPT",
     role: "Doctor of Physical Therapy",
-    image: "/images/whitney_portrait.jpg",
+    image: "/images/whitney.png",
     tags: ["Women's Health", "Running Performance", "Personal Training"],
     bio: "Whitney works with active women and runners of all levels, blending clinical expertise with performance coaching to help patients move — and perform — without limitations. She is highly passionate about pelvic floor rehabilitation and active maternity recovery.",
   },
   {
     name: "Dr. Kim Wilson, PT, DPT",
     role: "Doctor of Physical Therapy",
-    image: "/images/kim_portrait.jpg",
+    image: "/images/kim.png",
     tags: ["Pelvic Health", "Wound Care", "Complex Conditions"],
     bio: "Kim treats pelvic health and incontinence in both men and women, along with wound care and complex conditions, bringing a thorough, whole-person approach to every patient she sees. She is recognized as a dedicated pelvic health therapist in Kentucky.",
   },
@@ -99,7 +99,7 @@ export default function MeetTheTeam() {
                         src={member.image}
                         alt={member.name}
                         fill
-                        className="object-cover"
+                        className="object-cover object-[center_35%]"
                         sizes="(max-width: 1024px) 100vw, 33vw"
                       />
                     </div>

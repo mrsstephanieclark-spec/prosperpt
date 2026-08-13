@@ -58,19 +58,19 @@ const teamTeasers = [
     name: "Dr. Meg Raymer-Brown",
     role: "Founder",
     specialty: "Orthopedic care, dry needling, and mobile PT.",
-    image: "/images/meg_portrait.jpg",
+    image: "/images/meg.png",
   },
   {
     name: "Dr. Whitney Ensor",
     role: "Therapist",
     specialty: "Women's health, running performance, and personal training.",
-    image: "/images/whitney_portrait.jpg",
+    image: "/images/whitney.png",
   },
   {
     name: "Dr. Kim Wilson",
     role: "Therapist",
     specialty: "Pelvic health, wound care, and complex conditions.",
-    image: "/images/kim_portrait.jpg",
+    image: "/images/kim.png",
   },
 ];
 
@@ -89,16 +89,16 @@ export default function Home() {
             muted
             playsInline
             poster="/images/hero_pt_wellness.jpg"
-            className="object-cover w-full h-full opacity-85 object-[right_30%]"
+            className="object-cover w-full h-full opacity-85 object-[right_30%] scale-105 origin-right"
           >
             <source src="/images/updated-hero-video.mp4?v=4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(61,127,129,0.92)_0%,rgba(61,127,129,0.85)_35%,rgba(61,127,129,0.15)_65%,rgba(61,127,129,0.0)_85%)]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(61,127,129,0.92)_0%,rgba(61,127,129,0.85)_30%,rgba(61,127,129,0.10)_55%,rgba(61,127,129,0.0)_75%)]"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-cream">
-          <div className="max-w-xl lg:max-w-[40%] w-full">
+          <div className="max-w-md lg:max-w-[32%] w-full">
             <FadeIn direction="left">
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
                 Move Better. Feel Great. Live Well.

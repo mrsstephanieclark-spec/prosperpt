@@ -79,10 +79,10 @@ export default function OurStory() {
               <FadeIn direction="left" className="relative w-full max-w-md">
                 <div className="aspect-[3/4] w-full rounded-[2.5rem] overflow-hidden shadow-sm border border-secondary/15 organic-shape-1">
                   <Image
-                    src="/images/meg_portrait.jpg"
-                    alt="Dr. Meg Raymer-Brown, PT, DPT, Cert. DN"
+                    src="/images/meg.png"
+                    alt="Dr. Meg Raymer-Brown, Founder of Prosper PT & Wellness"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[center_35%]"
                     sizes="(max-width: 1024px) 100vw, 33vw"
                   />
                 </div>
