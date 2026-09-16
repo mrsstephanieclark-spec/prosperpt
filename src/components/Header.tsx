@@ -68,8 +68,8 @@ export default function Header() {
               src="/images/logo-updated.png"
               alt="Prosper PT & Wellness Logo"
               width={200}
-              height={113}
-              className="h-16 md:h-18 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+              height={109}
+              className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               priority
             />
           </Link>

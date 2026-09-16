@@ -13,8 +13,8 @@ export default function Footer() {
                 src="/images/logo-updated.png"
                 alt="Prosper PT & Wellness Logo"
                 width={200}
-                height={113}
-                className="h-16 w-auto object-contain brightness-0 invert transition-transform duration-300 group-hover:scale-[1.02]"
+                height={109}
+                className="h-16 md:h-20 w-auto object-contain brightness-0 invert transition-transform duration-300 group-hover:scale-[1.02]"
               />
             </Link>
             <p className="font-sans text-sm text-cream/70 max-w-sm mb-6 leading-relaxed">
