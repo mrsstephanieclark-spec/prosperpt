@@ -162,10 +162,11 @@ export default function Home() {
               <FadeIn direction="right" delay={0.1}>
                 <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-sm border border-secondary/15">
                   <Image
-                    src="/images/8.jpg"
-                    alt="Prosper PT therapist demonstrating a standing lunge stretch to a client in a fitness setting"
+                    src="/images/mission-photo.jpg"
+                    alt="Dr. Meg performing physical therapy manual technique for patient on treatment table"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[35%_center]"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
                   />
                 </div>
               </FadeIn>
