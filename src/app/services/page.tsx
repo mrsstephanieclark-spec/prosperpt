@@ -68,7 +68,7 @@ export default function ServicesHub() {
           {/* SEO keyword context block */}
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="font-sans text-xs text-primary/60 max-w-xl mx-auto leading-relaxed">
-              We offer comprehensive **physical therapy services in Shelbyville, KY**, including advanced therapeutic modalities like **dry needling**, myofascial **cupping**, specialized **pelvic health** care, and targeted **personal training**.
+              We offer comprehensive <strong>physical therapy services in Shelbyville, KY</strong>, including advanced therapeutic modalities like <strong>dry needling</strong>, myofascial <strong>cupping</strong>, specialized <strong>pelvic health</strong> care, and targeted <strong>personal training</strong>.
             </p>
           </div>
 

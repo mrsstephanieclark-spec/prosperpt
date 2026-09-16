@@ -40,7 +40,7 @@ export default function Contact() {
                   Practice Information
                 </h2>
                 <p className="font-sans text-sm text-primary/80 leading-relaxed mb-8">
-                  Prosper PT & Wellness is a self-pay, family-owned practice. We offer flexible session times at our office, in your home, online, or at CrossFit Shelbyville.
+                  Prosper PT & Wellness is a self-pay, privately-owned practice. We offer flexible session times at our clinic, in your home, online or local gyms.
                 </p>
 
                 <div className="space-y-6">
@@ -50,7 +50,9 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-serif text-sm font-semibold text-primary">Phone</h4>
-                      <p className="font-sans text-xs text-primary/75 mt-0.5">[Phone — TBD]</p>
+                      <a href="tel:5025206206" className="font-sans text-xs text-primary/75 hover:text-accent mt-0.5 block transition-colors">
+                        (502) 520-6206
+                      </a>
                     </div>
                   </div>
 

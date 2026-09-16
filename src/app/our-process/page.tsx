@@ -13,7 +13,7 @@ const steps = [
     number: "01",
     icon: <PhoneCall className="w-6 h-6 text-accent" />,
     title: "Step 1 — Start Here",
-    desc: "Fill out a quick form with your name, phone, and email, and we'll reach out to learn about your goals and see if Prosper is the right fit.",
+    desc: "Fill out a quick form with your name, phone, and email and we'll reach out for a free phone consultation to learn more about you and see if we can help.",
   },
   {
     number: "02",
@@ -43,7 +43,7 @@ export default function OurProcess() {
               How It Works
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              Understanding the **physical therapy process** helps you feel comfortable. Here is **what to expect at physical therapy**, starting with your initial **PT evaluation in Shelbyville, KY**.
+              Understanding the <strong>physical therapy process</strong> helps you feel comfortable. Here is <strong>what to expect at physical therapy</strong>, starting with your initial <strong>PT evaluation in Shelbyville, KY</strong>.
             </p>
           </FadeIn>
         </div>

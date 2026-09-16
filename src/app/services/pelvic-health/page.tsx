@@ -17,7 +17,7 @@ const inclusions = [
   },
   {
     title: "Fertility-related conditions",
-    desc: "Support for patients navigating fertility challenges, integrating visceral alignment and stress regulation.",
+    desc: "Support for patients navigating fertility changes by using the Mercier Technique; a highly specialized and hands-on, bodywork approach designed to support pelvic health and conception.",
   },
   {
     title: "Pre/postnatal care",
@@ -43,7 +43,7 @@ export default function PelvicHealth() {
               Pelvic Health Care for Every Body
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              Pelvic health issues are common, treatable, and nothing to be embarrassed about. We treat both men and women, with the same one-on-one, whole-person approach as every other visit at Prosper.
+              Pelvic health issues are common, treatable, and nothing to be embarrassed about. We treat both men and women, with the same one-on-one, whole-person approach as every other visit at Prosper PT.
             </p>
           </FadeIn>
         </div>
@@ -94,7 +94,7 @@ export default function PelvicHealth() {
                     Specialized Pelvic Support
                   </h4>
                   <p className="font-sans text-xs text-primary/70 leading-relaxed">
-                    If you need trusted **pelvic health in Shelbyville, KY**, specialized **fertility physical therapy**, bladder **incontinence treatment**, postpartum physical therapy, or targeted **male incontinence treatment**, our team provides direct support. We ensure that pelvic floor muscle care is private, comfortable, and tailored to your specific goals.
+                    If you need trusted <strong>pelvic health in Shelbyville, KY</strong>, specialized <strong>fertility physical therapy</strong>, bladder <strong>incontinence treatment</strong>, postpartum physical therapy, or targeted <strong>male incontinence treatment</strong>, our team provides direct support. We ensure that pelvic floor muscle care is private, comfortable, and tailored to your specific goals.
                   </p>
                 </div>
               </FadeIn>

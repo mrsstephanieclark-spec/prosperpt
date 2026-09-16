@@ -90,7 +90,7 @@ export default function PersonalTrainingRunning() {
                     Resilient Fitness Programs
                   </h4>
                   <p className="font-sans text-xs text-primary/70 leading-relaxed">
-                    If you want the best **personal training in Shelbyville, KY**, are looking for a dedicated **running coach in Kentucky**, or need specialized **injury prevention training**, we build your plan around how your joints actually move.
+                    If you want the best <strong>personal training in Shelbyville, KY</strong>, are looking for a dedicated <strong>running coach in Kentucky</strong>, or need specialized <strong>injury prevention training</strong>, we build your plan around how your joints actually move.
                   </p>
                 </div>
               </FadeIn>

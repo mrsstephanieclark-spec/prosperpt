@@ -6,7 +6,7 @@ export default function LocalBusinessSchema() {
     "image": "https://prosperptky.com/images/hero_pt_wellness.jpg",
     "@id": "https://prosperptky.com/#localbusiness",
     "url": "https://prosperptky.com",
-    "telephone": "[Phone — TBD]",
+    "telephone": "(502) 520-6206",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "[Address — TBD]",

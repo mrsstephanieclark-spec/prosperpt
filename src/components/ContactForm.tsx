@@ -9,6 +9,7 @@ interface ContactFormData {
   name: string;
   phone: string;
   email: string;
+  notes?: string;
 }
 
 export default function ContactForm() {
@@ -95,7 +96,7 @@ export default function ContactForm() {
         <input
           type="tel"
           id="phone"
-          placeholder="(502) 555-0199"
+          placeholder="(502) 520-6206"
           {...register("phone", {
             required: "Phone number is required",
             pattern: {
@@ -135,6 +136,19 @@ export default function ContactForm() {
         {errors.email && (
           <p className="text-red-500 text-xs mt-1 font-medium">{errors.email.message}</p>
         )}
+      </div>
+
+      {/* Optional Notes Field */}
+      <div>
+        <label htmlFor="notes" className="block text-sm font-semibold text-primary mb-1.5">
+          Anything you'd like us to know? (optional)
+        </label>
+        <textarea
+          id="notes"
+          rows={3}
+          {...register("notes")}
+          className="w-full px-4 py-3 rounded-xl bg-white border border-secondary/35 focus:ring-secondary/20 text-primary focus:outline-none focus:ring-4 transition-all resize-y"
+        />
       </div>
 
       {/* Submit Button */}

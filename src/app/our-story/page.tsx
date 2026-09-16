@@ -20,7 +20,7 @@ const values = [
   {
     icon: <Heart className="w-5 h-5 text-accent" />,
     title: "Faith",
-    desc: "Our work is rooted in purpose and service. Prosper is a faith-based physical therapy practice built around serving others and bringing hope to our Shelbyville community.",
+    desc: "Our work is rooted in purpose and service. Prosper PT is a faith-based physical therapy practice built around serving others and bringing hope to our Shelbyville community.",
   },
   {
     icon: <Award className="w-5 h-5 text-accent" />,
@@ -35,17 +35,17 @@ const values = [
   {
     icon: <Users className="w-5 h-5 text-accent" />,
     title: "Relationships",
-    desc: "You're known here, not just another chart. You will work with the same therapist every single time to ensure continuity.",
+    desc: "You're known here, not just another chart. We highly value each unique patient relationship and you will work with the same therapist every single time to ensure continuity of care.",
   },
   {
     icon: <GraduationCap className="w-5 h-5 text-accent" />,
     title: "Empowerment",
-    desc: "Our goal is for you to be equipped to manage your own health — not to need us forever. We equip you to stay injury-free.",
+    desc: "Our goal is for you to be equipped to manage your own health — not to need us forever. We are always here for you, but we equip you to stay injury-free.",
   },
   {
     icon: <ShieldCheck className="w-5 h-5 text-accent" />,
     title: "Integrity & Trust",
-    desc: "Honest, transparent care, every time. You know what you're paying upfront with no hidden costs.",
+    desc: "Honest, transparent care, every time. We communicate expectations and you know what you're paying upfront with no hidden costs.",
   },
 ];
 
@@ -60,10 +60,10 @@ export default function OurStory() {
               Our Journey
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mt-4 mb-6 leading-tight">
-              Why Prosper Exists
+              Why Prosper PT Exists
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              If you have been looking for an attentive, doctorate-level **physical therapist in Shelbyville, KY**, this is our **self-pay PT story** and our mission to provide patient-first care.
+              Our mission is simple: to provide thoughtful, personalized, patient-first care that helps you feel heard, cared for, and confident in your journey toward better health.
             </p>
           </FadeIn>
         </div>
@@ -104,13 +104,13 @@ export default function OurStory() {
                 
                 <div className="font-sans text-base text-primary/85 space-y-6 leading-relaxed mb-8">
                   <p>
-                    "I spent seven years working in a busy corporate outpatient clinic. My time with patients was often rushed, and my hands were tied by insurance limitations — no matter what the patient actually needed. I watched people get sicker and sicker, and I saw how fractured healthcare had become.
+                    "I spent seven years working in a busy corporate outpatient clinic. My time with patients was often rushed, and my hands were tied by insurance limitations — no matter what the patient actually needed. I watched patients struggle to get well while navigating a healthcare system that often felt increasingly fragmented and impersonal.
                   </p>
                   <p>
-                    I wanted the autonomy to spend real time with patients — to be thorough, and to deliver care that considers a person's whole life, not just their injury. That's why I started Prosper: a practice built around one-on-one attention, flexibility, and whole-person care, without an insurance company standing between me and my patients.
+                    I wanted the autonomy to spend real time with patients — to be thorough, and to deliver care that considers a person's whole life, not just their injury. That's why I started Prosper PT: a practice built around one-on-one attention, flexibility, and whole-person care, without an insurance company standing between me and my patients.
                   </p>
                   <p>
-                    The name Prosper comes from Jeremiah 29:11 — a reminder that this work is about more than fixing pain. It's about hope, purpose, and helping people get back to full, active lives."
+                    The name Prosper PT was inspired by my favorite scripture verse, Jeremiah 29:11 — a reminder that this work is about more than fixing pain. My work as a PT is not just a job, but a calling and ministry. It's about cultivating relationships, hope, purpose, and helping people get back to full, active lives."
                   </p>
                 </div>
 
@@ -154,7 +154,7 @@ export default function OurStory() {
                 What We Believe
               </h2>
               <p className="font-sans text-base text-primary/70">
-                These core standards guide how we serve our patients and build relationships in Shelbyville.
+                These core standards guide how we serve our patients and build relationships in Shelbyville, KY.
               </p>
             </FadeIn>
           </div>

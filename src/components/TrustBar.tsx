@@ -10,7 +10,7 @@ export default function TrustBar() {
           <span className="hidden md:inline text-cream/30">|</span>
           <span className="whitespace-nowrap">Mobile, In-Office & Telehealth</span>
           <span className="hidden md:inline text-cream/30">|</span>
-          <span className="whitespace-nowrap">Faith-Driven, Family-Owned</span>
+          <span className="whitespace-nowrap">Faith-Driven, Privately-Owned</span>
         </div>
       </div>
     </section>

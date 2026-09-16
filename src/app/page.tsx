@@ -135,7 +135,7 @@ export default function Home() {
                   <p>
                     We believe your body was made to move and move well. If you are looking for premier{" "}
                     <strong>self-pay physical therapy in Shelbyville, KY</strong>, or need high-quality{" "}
-                    <strong>one-on-one physical therapy in Shelbyville</strong>, Prosper is built for you.
+                    <strong>one-on-one physical therapy in Shelbyville</strong>, Prosper PT is built for you.
                   </p>
                   <p>
                     Our mission is to help active, busy people take control of their health, reduce pain, and get back to what they love — golf, walking, playing with their kids, travel — without limitations. We are proud to provide clinical sessions in-office, as well as convenient{" "}
@@ -163,7 +163,7 @@ export default function Home() {
                 <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-sm border border-secondary/15">
                   <Image
                     src="/images/8.jpg"
-                    alt="Prosper therapist demonstrating a standing lunge stretch to a client in a fitness setting"
+                    alt="Prosper PT therapist demonstrating a standing lunge stretch to a client in a fitness setting"
                     fill
                     className="object-cover"
                   />
@@ -183,7 +183,7 @@ export default function Home() {
                 Why Us
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary mt-3 mb-4">
-                Why Patients Choose Prosper
+                Why Patients Choose Prosper PT
               </h2>
               <p className="font-sans text-base text-primary/70">
                 Experience physical therapy designed to support your actual movement goals without clinic distractions.
@@ -333,7 +333,7 @@ export default function Home() {
                 Meet Us
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary mt-3 mb-4">
-                Meet the Team Behind Prosper
+                Meet the Team Behind Prosper PT
               </h2>
               <p className="font-sans text-base text-primary/70">
                 Doctorate-level therapists committed to your health and movement goals.
@@ -418,7 +418,7 @@ export default function Home() {
                   </svg>
                   <div>
                     <h4 className="font-serif text-sm font-bold text-cream">Prosper PT & Wellness</h4>
-                    <p className="font-sans text-xs text-cream/60">Shelbyville, KY &bull; Family-Owned</p>
+                    <p className="font-sans text-xs text-cream/60">Shelbyville, KY &bull; Privately-Owned</p>
                   </div>
                 </div>
 

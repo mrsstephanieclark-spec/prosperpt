@@ -108,7 +108,7 @@ export default function PhysicalTherapy() {
                     Specialized Local Care
                   </h4>
                   <p className="font-sans text-xs text-primary/70 leading-relaxed">
-                    If you are looking for advanced **dry needling in Shelbyville, KY**, myofascial **cupping therapy**, localized **back pain treatment**, or effective **headache treatment**, our **orthopedic physical therapy in Kentucky** covers your needs.
+                    If you are looking for advanced <strong>dry needling in Shelbyville, KY</strong>, myofascial <strong>cupping therapy</strong>, localized <strong>back pain treatment</strong>, or effective <strong>headache treatment</strong>, our <strong>orthopedic physical therapy in Kentucky</strong> covers your needs.
                   </p>
                 </div>
               </FadeIn>

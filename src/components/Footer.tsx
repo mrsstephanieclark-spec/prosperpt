@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-2 pr-4">
             <Link href="/" className="flex items-center group">
               <Image
-                src="/images/logo-cropped.png"
+                src="/images/logo-updated.png"
                 alt="Prosper PT & Wellness Logo"
                 width={200}
                 height={113}
@@ -24,7 +24,9 @@ export default function Footer() {
             <div className="space-y-2 text-sm font-sans">
               <p>
                 <span className="font-semibold text-secondary">Phone:</span>{" "}
-                <span className="text-cream/90">[Phone — TBD]</span>
+                <a href="tel:5025206206" className="text-cream/90 hover:text-accent transition-colors">
+                  (502) 520-6206
+                </a>
               </p>
               <p>
                 <span className="font-semibold text-secondary">Email:</span>{" "}
@@ -68,11 +70,6 @@ export default function Footer() {
                   Mobile & Telehealth
                 </Link>
               </li>
-              <li>
-                <Link href="/testimonials" className="text-cream/70 hover:text-accent transition-colors">
-                  Testimonials
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -113,9 +110,7 @@ export default function Footer() {
         <div className="border-t border-cream/10 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-xs font-sans text-cream/50 max-w-2xl text-center md:text-left leading-relaxed">
             <p className="mb-2">
-              <strong>Notice:</strong> Prosper PT & Wellness is an out-of-network, self-pay practice. 
-              We do not bill commercial health insurance, Medicare, or Medicaid. We can provide itemized receipts 
-              (superbills) for clients to self-submit to their insurance carriers for potential reimbursement (excluding Medicare/Medicaid).
+              <strong>Notice:</strong> Prosper PT & Wellness is an out-of-network, self-pay practice. We do not bill commercial health insurance. We can provide itemized receipts (superbills) for clients to self-submit to their insurance carriers for potential reimbursement.
             </p>
             <p>
               &copy; {new Date().getFullYear()} Prosper PT & Wellness, LLC. All rights reserved.

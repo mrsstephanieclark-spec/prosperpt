@@ -30,7 +30,6 @@ const navItems = [
   { name: "Why Self-Pay", href: "/why-self-pay" },
   { name: "Our Process", href: "/our-process" },
   { name: "Mobile & Telehealth", href: "/mobile-and-telehealth" },
-  { name: "Testimonials", href: "/testimonials" },
 ];
 
 export default function Header() {
@@ -66,7 +65,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <Image
-              src="/images/logo-cropped.png"
+              src="/images/logo-updated.png"
               alt="Prosper PT & Wellness Logo"
               width={200}
               height={113}

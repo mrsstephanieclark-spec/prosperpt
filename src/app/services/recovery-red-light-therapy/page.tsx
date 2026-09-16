@@ -86,7 +86,7 @@ export default function RecoveryRedLightTherapy() {
                     Advanced Cellular Healing
                   </h4>
                   <p className="font-sans text-xs text-primary/70 leading-relaxed">
-                    If you want clinical **red light therapy in Shelbyville, KY**, specialized **recovery therapy**, full-body **infrared therapy in Kentucky**, or ongoing **pain management**, our recovery sessions are designed to speed cell repair, ease stiffness, and restore vitality.
+                    If you want clinical <strong>red light therapy in Shelbyville, KY</strong>, specialized <strong>recovery therapy</strong>, full-body <strong>infrared therapy in Kentucky</strong>, or ongoing <strong>pain management</strong>, our recovery sessions are designed to speed cell repair, ease stiffness, and restore vitality.
                   </p>
                 </div>
               </FadeIn>

@@ -43,7 +43,7 @@ export default function MobileTelehealth() {
               Care That Fits Your Life
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              Not everyone can carve out time to sit in a waiting room. That's why Prosper offers three ways to get care — so your schedule and location don't get in the way of getting better.
+              Not everyone can carve out time to sit in a waiting room. That's why Prosper PT offers three ways to get care — so your schedule and location don't get in the way of getting better.
             </p>
           </FadeIn>
         </div>
@@ -82,7 +82,7 @@ export default function MobileTelehealth() {
           {/* SEO natural context block */}
           <div className="max-w-3xl mx-auto text-center border-t border-secondary/15 pt-12">
             <p className="font-sans text-xs text-primary/60 max-w-xl mx-auto leading-relaxed">
-              If you are looking for **mobile physical therapy in Shelbyville, KY**, convenient **home physical therapy**, secure **telehealth physical therapy in Kentucky**, or are searching for "**mobile PT near me**", we fit care to your lifestyle.
+              If you are looking for <strong>mobile physical therapy in Shelbyville, KY</strong>, convenient <strong>home physical therapy</strong>, secure <strong>telehealth physical therapy in Kentucky</strong>, or are searching for "<strong>mobile PT near me</strong>", we fit care to your lifestyle.
             </p>
           </div>
 

@@ -15,7 +15,7 @@ const team = [
     role: "Founder & Doctor of Physical Therapy",
     image: "/images/meg.png",
     tags: ["Orthopedic & Sports Rehab", "Dry Needling", "Mobile PT"],
-    bio: "Meg founded Prosper after seven years in corporate outpatient care, where rushed appointments and insurance limitations kept her from giving patients the care they deserved. She built Prosper around one-on-one attention, whole-person care, and the flexibility to meet patients where they are — at home, at the gym, or in the office. As a dry needling therapist in Shelbyville, she helps patients achieve lasting pain relief and mobility.",
+    bio: "Meg founded Prosper PT after seven years in corporate outpatient care, where rushed appointments and insurance limitations kept her from giving patients the care they deserved. She built Prosper PT around one-on-one attention, whole-person care, and the flexibility to meet patients where they are — at home, at the gym, or in the office. As a dry needling therapist in Shelbyville, she helps patients achieve lasting pain relief and mobility.",
   },
   {
     name: "Dr. Whitney Ensor, PT, DPT",
@@ -69,10 +69,10 @@ export default function MeetTheTeam() {
               Our Clinicians
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mt-4 mb-6 leading-tight">
-              Meet the Team Behind Prosper
+              Meet the Team Behind Prosper PT
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              If you are looking for trusted, doctorate-level **Shelbyville, KY physical therapists**, our clinical experts provide direct access care designed around your lifestyle.
+              If you are looking for trusted, doctorate-level <strong>Shelbyville, KY physical therapists</strong>, our clinical experts provide direct access care designed around your lifestyle.
             </p>
           </FadeIn>
         </div>
@@ -140,7 +140,7 @@ export default function MeetTheTeam() {
                     <div className="p-4 bg-cream rounded-2xl border border-secondary/10 flex items-start gap-3">
                       <ShieldCheck className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                       <p className="font-sans text-xs text-primary/80 leading-relaxed font-semibold">
-                        At Prosper, you will always work directly and consistently with your own therapist. Your care is never passed off to aides, techs, or student assistants.
+                        At Prosper PT, you will always work directly and consistently with your own therapist. Your care is never passed off to aides, techs, or student assistants.
                       </p>
                     </div>
 

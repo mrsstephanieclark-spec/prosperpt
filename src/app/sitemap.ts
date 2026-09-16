@@ -17,7 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/why-self-pay",
     "/our-process",
     "/mobile-and-telehealth",
-    "/testimonials",
     "/contact",
   ];
 
