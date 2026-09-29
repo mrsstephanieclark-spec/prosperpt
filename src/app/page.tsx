@@ -165,7 +165,7 @@ export default function Home() {
                     src="/images/mission-photo.jpg"
                     alt="Dr. Meg performing physical therapy manual technique for patient on treatment table"
                     fill
-                    className="object-cover object-[35%_center]"
+                    className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 40vw"
                   />
                 </div>
