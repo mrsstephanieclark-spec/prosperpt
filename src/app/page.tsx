@@ -58,7 +58,7 @@ const teamTeasers = [
   {
     name: "Dr. Meg Raymer-Brown",
     role: "Founder",
-    specialty: "Orthopedic care, dry needling, and mobile PT.",
+    specialty: "Orthopedic care, manual therapy, dry needling and mobile PT.",
     image: "/images/meg.png",
   },
   {
@@ -227,7 +227,7 @@ export default function Home() {
                 Everything You Need to Move Well, In One Place
               </h2>
               <p className="font-sans text-base text-primary/70">
-                From sports rehab to specialized pelvic wellness and active maintenance.
+                From sports rehab and personal training to specialized pelvic health and active maintenance.
               </p>
             </FadeIn>
           </div>
