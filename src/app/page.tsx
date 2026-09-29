@@ -70,7 +70,7 @@ const teamTeasers = [
   {
     name: "Dr. Kim Wilson",
     role: "Therapist",
-    specialty: "Pelvic health, wound care, and complex conditions.",
+    specialty: "Fertility and pelvic health, hypermobility disorders and orthopedic care.",
     image: "/images/kim.png",
   },
 ];
