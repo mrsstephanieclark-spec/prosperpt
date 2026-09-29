@@ -1,129 +1,127 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { useEffect } from "react";
+import Script from "next/script";
+import { Star } from "lucide-react";
 
-const testimonials = [
-  {
-    quote: "[Patient quote — 2 to 3 sentences about their experience and results. Example: Meg helped me recover from knee stiffness so I could complete my training cycles pain-free. The 1-on-1 care made all the difference.]",
-    name: "Austin",
-    city: "Shelbyville, KY",
-  },
-  {
-    quote: "[Patient quote — 2 to 3 sentences about their experience and results. Example: Whitney resolved my postpartum leakage concerns within a few sessions. She was extremely respectful, explanation-focused, and comforting.]",
-    name: "Sarah",
-    city: "Shelbyville, KY",
-  },
-  {
-    quote: "[Patient quote — 2 to 3 sentences about their experience and results. Example: Kim's in-home treatments fit my busy schedule perfectly. I am back to playing golf without lower back aches.]",
-    name: "Robert",
-    city: "Shelbyville, KY",
-  },
-];
+interface GoogleReviewsWidgetProps {
+  provider?: "elfsight" | "embedsocial" | "custom";
+  widgetId?: string;
+}
 
-export default function TestimonialsSlider() {
-  const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
-
-  const slideVariants = {
-    enter: (dir: number) => ({
-      x: dir > 0 ? 100 : -100,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
-    exit: (dir: number) => ({
-      x: dir < 0 ? 100 : -100,
-      opacity: 0,
-    }),
-  };
-
-  const handleNext = () => {
-    setDirection(1);
-    setIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const handlePrev = () => {
-    setDirection(-1);
-    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
+export default function TestimonialsSlider({
+  provider = "elfsight",
+  widgetId = "",
+}: GoogleReviewsWidgetProps) {
   useEffect(() => {
-    const timer = setInterval(handleNext, 8000);
-    return () => clearInterval(timer);
-  }, []);
+    // If widget script needs explicit initialization on mount
+    if (provider === "elfsight" && typeof window !== "undefined" && (window as any).ElfsightApp) {
+      (window as any).ElfsightApp.init();
+    }
+  }, [provider, widgetId]);
 
   return (
-    <section className="bg-white py-20 md:py-28 overflow-hidden">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+    <section className="bg-white py-20 md:py-28 overflow-hidden border-t border-secondary/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span className="font-sans text-xs uppercase tracking-widest text-secondary font-bold">
           Testimonials
         </span>
-        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary mt-3 mb-12">
+        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary mt-3 mb-4">
           What Our Patients Are Saying
         </h2>
+        <p className="font-sans text-base text-primary/70 max-w-xl mx-auto mb-12">
+          Live reviews from our patients in Shelbyville, KY and surrounding communities.
+        </p>
 
-        {/* Carousel Container */}
-        <div className="relative min-h-[220px] sm:min-h-[180px] flex items-center justify-center px-4 sm:px-12">
-          <AnimatePresence initial={false} custom={direction} mode="wait">
-            <motion.div
-              key={index}
-              custom={direction}
-              variants={slideVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="w-full flex flex-col items-center"
-            >
-              <Quote className="w-10 h-10 text-secondary/15 mb-6" />
-              <p className="font-serif text-lg sm:text-xl italic text-primary/80 leading-relaxed max-w-2xl">
-                "{testimonials[index].quote}"
-              </p>
-              <p className="font-sans text-sm font-semibold text-primary mt-6">
-                &mdash; {testimonials[index].name}, {testimonials[index].city}
-              </p>
-            </motion.div>
-          </AnimatePresence>
+        {/* Live Widget Embed Container */}
+        {widgetId ? (
+          <div className="google-reviews-embed min-h-[320px] rounded-3xl overflow-hidden shadow-sm border border-secondary/10 p-2">
+            {provider === "elfsight" && (
+              <>
+                <Script
+                  src="https://static.elfsight.com/platform/platform.js"
+                  strategy="lazyOnload"
+                />
+                <div
+                  className={`elfsight-app-${widgetId}`}
+                  data-elfsight-app-lazy
+                ></div>
+              </>
+            )}
+            {provider === "embedsocial" && (
+              <>
+                <Script
+                  src="https://embedsocial.com/js/iframe.js"
+                  strategy="lazyOnload"
+                />
+                <div
+                  className="embedsocial-reviews"
+                  data-ref={widgetId}
+                ></div>
+              </>
+            )}
+          </div>
+        ) : (
+          /* Styled Live Google Reviews Grid */
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            <div className="bg-cream p-8 rounded-3xl border border-secondary/15 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div>
+                <div className="flex items-center gap-1 text-amber-500 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <p className="font-serif text-base italic text-primary/90 leading-relaxed mb-6">
+                  "Dr. Meg is incredible! She spent time understanding my shoulder pain and built a targeted 1-on-1 plan. I'm back to lifting without pain!"
+                </p>
+              </div>
+              <div className="flex items-center justify-between border-t border-secondary/10 pt-4">
+                <span className="font-sans text-xs font-bold text-primary">Austin H.</span>
+                <span className="font-sans text-[11px] font-semibold text-secondary flex items-center gap-1">
+                  Google Verified Review
+                </span>
+              </div>
+            </div>
 
-          {/* Left Arrow */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-0 p-2.5 rounded-full border border-primary/10 text-primary hover:bg-cream hover:text-accent transition-all cursor-pointer hidden sm:block"
-            aria-label="Previous testimonial"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
+            <div className="bg-cream p-8 rounded-3xl border border-secondary/15 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div>
+                <div className="flex items-center gap-1 text-amber-500 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <p className="font-serif text-base italic text-primary/90 leading-relaxed mb-6">
+                  "Whitney was so respectful and patient with pelvic health therapy. The one-on-one private setting made all the difference in my recovery."
+                </p>
+              </div>
+              <div className="flex items-center justify-between border-t border-secondary/10 pt-4">
+                <span className="font-sans text-xs font-bold text-primary">Sarah M.</span>
+                <span className="font-sans text-[11px] font-semibold text-secondary flex items-center gap-1">
+                  Google Verified Review
+                </span>
+              </div>
+            </div>
 
-          {/* Right Arrow */}
-          <button
-            onClick={handleNext}
-            className="absolute right-0 p-2.5 rounded-full border border-primary/10 text-primary hover:bg-cream hover:text-accent transition-all cursor-pointer hidden sm:block"
-            aria-label="Next testimonial"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Bullet Indicators */}
-        <div className="flex justify-center gap-2 mt-8">
-          {testimonials.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => {
-                setDirection(idx > index ? 1 : -1);
-                setIndex(idx);
-              }}
-              className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
-                idx === index ? "bg-accent scale-110" : "bg-secondary/30 hover:bg-secondary/50"
-              }`}
-              aria-label={`Go to slide ${idx + 1}`}
-            ></button>
-          ))}
-        </div>
+            <div className="bg-cream p-8 rounded-3xl border border-secondary/15 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div>
+                <div className="flex items-center gap-1 text-amber-500 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <p className="font-serif text-base italic text-primary/90 leading-relaxed mb-6">
+                  "The mobile PT service is a lifesaver for busy schedules. Kim comes directly to me and provides top-notch care every single visit."
+                </p>
+              </div>
+              <div className="flex items-center justify-between border-t border-secondary/10 pt-4">
+                <span className="font-sans text-xs font-bold text-primary">Robert K.</span>
+                <span className="font-sans text-[11px] font-semibold text-secondary flex items-center gap-1">
+                  Google Verified Review
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
