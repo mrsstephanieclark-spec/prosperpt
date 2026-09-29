@@ -187,7 +187,7 @@ export default function Home() {
                 Why Patients Choose Prosper PT
               </h2>
               <p className="font-sans text-base text-primary/70">
-                Experience physical therapy designed to support your actual movement goals without clinic distractions.
+                Experience physical therapy designed to support your movement and wellness goals without the clinic distractions.
               </p>
             </FadeIn>
           </div>
