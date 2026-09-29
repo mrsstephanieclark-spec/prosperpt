@@ -129,17 +129,17 @@ export default function Home() {
                   Our Mission
                 </span>
                 <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary mt-3 mb-6 leading-tight">
-                  Care Built Around You, Not a Waiting Room.
+                  More Than Rehab — Care for the Whole YOU.
                 </h2>
                 <div className="font-sans text-base text-primary/80 space-y-6 leading-relaxed">
                   <p>
-                    We believe your body was made to move and move well. If you are looking for premier{" "}
+                    We believe God created our bodies to move and move well. If you are looking for premier{" "}
                     <strong>self-pay physical therapy in Shelbyville, KY</strong>, or need high-quality{" "}
-                    <strong>one-on-one physical therapy in Shelbyville</strong>, Prosper PT is built for you.
+                    <strong>one-on-one physical therapy in Shelbyville</strong>, Prosper PT is for you.
                   </p>
                   <p>
-                    Our mission is to help active, busy people take control of their health, reduce pain, and get back to what they love — golf, walking, playing with their kids, travel — without limitations. We are proud to provide clinical sessions in-office, as well as convenient{" "}
-                    <strong>mobile physical therapy across Kentucky</strong>.
+                    Our mission is to help active, busy people take control of their health, reduce pain, and get back to what they love — sports, walking, playing with their kids, travel — without limitations. We are proud to provide clinical sessions in-office, as well as convenient{" "}
+                    <strong>mobile physical therapy services in Shelby County and surrounding areas</strong>.
                   </p>
                   <p>
                     Every session is one-on-one, with your own therapist, every time. No techs, no aides, no rush.
