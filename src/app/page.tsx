@@ -153,7 +153,7 @@ export default function Home() {
               <FadeIn direction="right" className="bg-white p-8 rounded-3xl border border-secondary/15 shadow-sm relative">
                 <span className="absolute -top-4 -left-4 text-6xl text-secondary/15 font-serif select-none">“</span>
                 <blockquote className="font-serif text-lg md:text-xl italic text-primary/90 leading-relaxed mb-4">
-                  "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."
+                  "For I know the plans I have for you," declares the Lord, "plans to <strong className="font-bold not-italic text-secondary">PROSPER</strong> you and not to harm you, plans to give you hope and a future."
                 </blockquote>
                 <cite className="font-sans text-xs font-semibold text-secondary not-italic uppercase tracking-wider block text-right">
                   &mdash; Jeremiah 29:11
