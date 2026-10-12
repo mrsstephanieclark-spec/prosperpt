@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Practice Info */}
           <div className="md:col-span-2 pr-4">
-            <Link href="/" className="flex items-center group">
+            <Link href="/" className="flex items-center group mb-6 md:mb-8">
               <Image
                 src="/images/logo-updated.png"
                 alt="Prosper PT & Wellness Logo"
@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="space-y-2 text-sm font-sans">
               <p>
                 <span className="font-semibold text-secondary">Phone:</span>{" "}
-                <a href="tel:5025206206" className="text-cream/90 hover:text-accent transition-colors">
+                <a href="tel:+15025206206" className="text-cream/90 hover:text-accent transition-colors">
                   (502) 520-6206
                 </a>
               </p>
