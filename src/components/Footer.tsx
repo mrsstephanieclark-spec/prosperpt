@@ -110,7 +110,7 @@ export default function Footer() {
         <div className="border-t border-cream/10 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-xs font-sans text-cream/50 max-w-2xl text-center md:text-left leading-relaxed">
             <p className="mb-2">
-              <strong>Notice:</strong> Prosper PT & Wellness is an out-of-network, self-pay practice. We do not bill commercial health insurance. We can provide itemized receipts (superbills) for clients to self-submit to their insurance carriers for potential reimbursement.
+              Prosper PT & Wellness is an out-of-network, self-pay practice. We do not bill commercial health insurance. We can provide itemized receipts (superbills) for clients to self-submit to their insurance carriers for potential reimbursement.
             </p>
             <p>
               &copy; {new Date().getFullYear()} Prosper PT & Wellness, LLC. All rights reserved.
