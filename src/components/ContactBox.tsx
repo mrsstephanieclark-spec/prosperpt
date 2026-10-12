@@ -31,7 +31,7 @@ export default function ContactBox() {
                   </div>
                   <div>
                     <h4 className="font-serif text-sm font-semibold text-secondary">Phone</h4>
-                    <a href="tel:5025206206" className="font-sans text-sm text-cream/90 hover:text-accent mt-0.5 block transition-colors">
+                    <a href="tel:+15025206206" className="font-sans text-sm text-cream/90 hover:text-accent mt-0.5 block transition-colors">
                       (502) 520-6206
                     </a>
                   </div>

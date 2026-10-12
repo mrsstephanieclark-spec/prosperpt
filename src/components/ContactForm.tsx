@@ -9,7 +9,7 @@ interface ContactFormData {
   name: string;
   phone: string;
   email: string;
-  notes?: string;
+  message?: string;
 }
 
 export default function ContactForm() {
@@ -138,17 +138,21 @@ export default function ContactForm() {
         )}
       </div>
 
-      {/* Optional Notes Field */}
+      {/* Optional Message Field */}
       <div>
-        <label htmlFor="notes" className="block text-sm font-semibold text-primary mb-1.5">
+        <label htmlFor="message" className="block text-sm font-semibold text-primary mb-1.5">
           Anything you'd like us to know? (optional)
         </label>
         <textarea
-          id="notes"
-          rows={3}
-          {...register("notes")}
-          className="w-full px-4 py-3 rounded-xl bg-white border border-secondary/35 focus:ring-secondary/20 text-primary focus:outline-none focus:ring-4 transition-all resize-y"
+          id="message"
+          rows={4}
+          placeholder="e.g. best times to reach you, mobile vs. in-office"
+          {...register("message")}
+          className="w-full px-4 py-3 rounded-xl bg-white border border-secondary/35 focus:ring-secondary/20 text-primary placeholder:text-primary/40 focus:outline-none focus:ring-4 transition-all resize-y font-sans text-sm"
         />
+        <p className="text-xs text-primary/60 mt-1.5 leading-normal">
+          Please don't include medical details. We'll talk through those on your call.
+        </p>
       </div>
 
       {/* Submit Button */}
