@@ -22,7 +22,7 @@ export default function WhySelfPay() {
               Why We Don't Take Insurance — And Why That's a Good Thing
             </h1>
             <p className="font-sans text-base sm:text-lg text-primary/80 leading-relaxed max-w-2xl mx-auto">
-              Because your recovery deserves to come first. Our self-pay model allows us to focus on what you actually need — not what an insurance company says you need.
+              <strong className="font-bold text-primary">Because your recovery deserves to come first.</strong> Our self-pay model allows us to focus on what you actually need—not what an insurance company says you need.
             </p>
           </FadeIn>
         </div>
