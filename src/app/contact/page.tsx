@@ -50,7 +50,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-serif text-sm font-semibold text-primary">Phone</h4>
-                      <a href="tel:5025206206" className="font-sans text-xs text-primary/75 hover:text-accent mt-0.5 block transition-colors">
+                      <a href="tel:+15025206206" className="font-sans text-xs text-primary/75 hover:text-accent mt-0.5 block transition-colors">
                         (502) 520-6206
                       </a>
                     </div>
