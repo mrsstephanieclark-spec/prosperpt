@@ -9,27 +9,65 @@ export const metadata: Metadata = {
   description: "Meet Dr. Meg Raymer-Brown, Dr. Whitney Ensor, and Dr. Kim Wilson — the doctorate-level physical therapists behind Prosper PT & Wellness in Shelbyville, KY.",
 };
 
-const team = [
+interface TeamMember {
+  name: string;
+  role: string;
+  image: string;
+  tags: string[];
+  bio: React.ReactNode;
+  bioText: string;
+}
+
+const team: TeamMember[] = [
   {
     name: "Dr. Meg Raymer-Brown, PT, DPT, Cert. DN",
     role: "Founder & Doctor of Physical Therapy",
     image: "/images/meg.png",
     tags: ["Orthopedic & Sports Rehab", "Dry Needling", "Mobile PT"],
-    bio: "Meg founded Prosper PT after seven years in corporate outpatient care, where rushed appointments and insurance limitations kept her from giving patients the care they deserved. She built Prosper PT around one-on-one attention, whole-person care, and the flexibility to meet patients where they are — at home, at the gym, or in the office. As a dry needling therapist in Shelbyville, she helps patients achieve lasting pain relief and mobility.",
+    bioText: "Dr. Meg founded Prosper PT & Wellness after seven years in corporate outpatient care, where rushed appointments and insurance limitations kept her from giving patients the care they deserved. She built Prosper PT around one-on-one attention, whole-person care, and the flexibility to meet patients where they are — at home, at the gym, online or in the clinic. Meg is passionate about serving others and connecting with patients by providing high quality and personal care. With experience in outpatient orthopedics, sports medicine, industrial health, aquatic therapy and cancer rehabilitation - she strives to get to know you, your body and your goals to help you live your life to the fullest! In her free time, Meg enjoys swing dancing, playing the piano, CrossFit, coaching girls volleyball/softball, doodling and sipping on a good cup of coffee. She is involved in her church and is a board member of Yeshua Healthcare.",
+    bio: (
+      <>
+        <p>
+          Dr. Meg founded Prosper PT & Wellness after seven years in corporate outpatient care, where rushed appointments and insurance limitations kept her from giving patients the care they deserved. She built Prosper PT around one-on-one attention, whole-person care, and the flexibility to meet patients where they are — at home, at the gym, online or in the clinic. Meg is passionate about serving others and connecting with patients by providing high quality and personal care. With experience in outpatient orthopedics, sports medicine, industrial health, aquatic therapy and cancer rehabilitation - she strives to get to know you, your body and your goals to help you live your life to the fullest!
+        </p>
+        <p>
+          In her free time, Meg enjoys swing dancing, playing the piano, CrossFit, coaching girls volleyball/softball, doodling and sipping on a good cup of coffee. She is involved in her church and is a board member of{" "}
+          <a
+            href="https://www.yeshuahealthcare.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#3D7F81] hover:underline font-semibold"
+          >
+            Yeshua Healthcare
+          </a>
+          .
+        </p>
+      </>
+    ),
   },
   {
     name: "Dr. Whitney Ensor, PT, DPT",
     role: "Doctor of Physical Therapy",
     image: "/images/whitney.png",
     tags: ["Women's Health", "Running Performance", "Personal Training"],
-    bio: "Whitney works with active women and runners of all levels, blending clinical expertise with performance coaching to help patients move — and perform — without limitations. She is highly passionate about pelvic floor rehabilitation and active maternity recovery.",
+    bioText: "Whitney works with active women and runners of all levels, blending clinical expertise with performance coaching to help patients move — and perform — without limitations. She is highly passionate about pelvic floor rehabilitation and active maternity recovery.",
+    bio: (
+      <p>
+        Whitney works with active women and runners of all levels, blending clinical expertise with performance coaching to help patients move — and perform — without limitations. She is highly passionate about pelvic floor rehabilitation and active maternity recovery.
+      </p>
+    ),
   },
   {
     name: "Dr. Kim Wilson, PT, DPT",
     role: "Doctor of Physical Therapy",
     image: "/images/kim.png",
     tags: ["Pelvic Health", "Wound Care", "Complex Conditions"],
-    bio: "Kim treats pelvic health and incontinence in both men and women, along with wound care and complex conditions, bringing a thorough, whole-person approach to every patient she sees. She is recognized as a dedicated pelvic health therapist in Kentucky.",
+    bioText: "Kim treats pelvic health and incontinence in both men and women, along with wound care and complex conditions, bringing a thorough, whole-person approach to every patient she sees. She is recognized as a dedicated pelvic health therapist in Kentucky.",
+    bio: (
+      <p>
+        Kim treats pelvic health and incontinence in both men and women, along with wound care and complex conditions, bringing a thorough, whole-person approach to every patient she sees. She is recognized as a dedicated pelvic health therapist in Kentucky.
+      </p>
+    ),
   },
 ];
 
@@ -49,7 +87,7 @@ export default function MeetTheTeam() {
         "addressCountry": "US"
       }
     },
-    "description": member.bio,
+    "description": member.bioText,
     "image": `https://prosperptky.com${member.image}`
   }));
 
@@ -132,9 +170,9 @@ export default function MeetTheTeam() {
                       ))}
                     </div>
 
-                    <p className="font-sans text-base text-primary/80 mb-6 leading-relaxed">
+                    <div className="font-sans text-base text-primary/80 mb-6 leading-relaxed space-y-4">
                       {member.bio}
-                    </p>
+                    </div>
 
                     {/* Quality statement reinforcement */}
                     <div className="p-4 bg-cream rounded-2xl border border-secondary/10 flex items-start gap-3">
