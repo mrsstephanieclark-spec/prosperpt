@@ -189,7 +189,7 @@ export default function OurStory() {
               Ready to Feel Seen and Heard?
             </h2>
             <p className="font-sans text-base text-cream/80 max-w-md mx-auto mb-8">
-              Experience the difference of faith-based, patient-first physical therapy built around your actual lifestyle goals.
+              Experience the difference.
             </p>
             <Link
               href="/contact"
