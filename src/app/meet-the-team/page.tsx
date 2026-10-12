@@ -58,14 +58,14 @@ const team: TeamMember[] = [
     ),
   },
   {
-    name: "Dr. Kim Wilson, PT, DPT",
+    name: "Dr. Kim Wilson, PT, DPT, Cert. DN, CWS",
     role: "Doctor of Physical Therapy",
     image: "/images/kim.png",
     tags: ["Pelvic Health", "Wound Care", "Complex Conditions"],
-    bioText: "Kim treats pelvic health and incontinence in both men and women, along with wound care and complex conditions, bringing a thorough, whole-person approach to every patient she sees. She is recognized as a dedicated pelvic health therapist in Kentucky.",
+    bioText: "Dr. Kim is passionate about treating orthopedic conditions with a special emphasis on individuals with hypermobility spectrum disorder (HSD) and Ehlers-Danlos Syndrome (EDS). Kim also has a specialty in treating pelvic health conditions and incontinence in both men and women. She is certified in the Mercier Technique; a gentle, hands-on bodywork approach designed to address mobility in the pelvis to optimize fertility and conception. She also currently serves as the Director of Rehab at New Castle Nursing and Rehab. Outside of work, she enjoys spending time with her family, baking, sewing or doing something crafty.",
     bio: (
       <p>
-        Kim treats pelvic health and incontinence in both men and women, along with wound care and complex conditions, bringing a thorough, whole-person approach to every patient she sees. She is recognized as a dedicated pelvic health therapist in Kentucky.
+        Dr. Kim is passionate about treating orthopedic conditions with a special emphasis on individuals with hypermobility spectrum disorder (HSD) and Ehlers-Danlos Syndrome (EDS). Kim also has a specialty in treating pelvic health conditions and incontinence in both men and women. She is certified in the Mercier Technique; a gentle, hands-on bodywork approach designed to address mobility in the pelvis to optimize fertility and conception. She also currently serves as the Director of Rehab at New Castle Nursing and Rehab. Outside of work, she enjoys spending time with her family, baking, sewing or doing something crafty.
       </p>
     ),
   },
