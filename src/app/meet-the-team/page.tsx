@@ -46,14 +46,14 @@ const team: TeamMember[] = [
     ),
   },
   {
-    name: "Dr. Whitney Ensor, PT, DPT",
+    name: "Dr. Whitney Ensor, PT, DPT, WCS, CPT-NASM, CIDN",
     role: "Doctor of Physical Therapy",
     image: "/images/whitney.png",
-    tags: ["Women's Health", "Running Performance", "Personal Training"],
-    bioText: "Whitney works with active women and runners of all levels, blending clinical expertise with performance coaching to help patients move — and perform — without limitations. She is highly passionate about pelvic floor rehabilitation and active maternity recovery.",
+    tags: ["Pelvic Health", "Running Performance", "Personal Training"],
+    bioText: "Dr. Whitney works with active men and women and runners of all levels, blending clinical expertise with performance coaching and personal training to help patients move — and perform — without limitations. She also treats pelvic health conditions including urinary/bowel incontinence, pre/postnatal and pregnancy-related conditions. In addition to treating patients, she is adjunct faculty for a DPT program, a certified yoga instructor and coaches high school cross country. In her free time, Whitney enjoys gardening, bodybuilding and traveling.",
     bio: (
       <p>
-        Whitney works with active women and runners of all levels, blending clinical expertise with performance coaching to help patients move — and perform — without limitations. She is highly passionate about pelvic floor rehabilitation and active maternity recovery.
+        Dr. Whitney works with active men and women and runners of all levels, blending clinical expertise with performance coaching and personal training to help patients move — and perform — without limitations. She also treats pelvic health conditions including urinary/bowel incontinence, pre/postnatal and pregnancy-related conditions. In addition to treating patients, she is adjunct faculty for a DPT program, a certified yoga instructor and coaches high school cross country. In her free time, Whitney enjoys gardening, bodybuilding and traveling.
       </p>
     ),
   },
